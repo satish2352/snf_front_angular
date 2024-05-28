@@ -1,0 +1,32 @@
+.ova-heading .title {
+    font-size: 50px;
+    line-height: 44px;
+    font-weight: 400;
+    color: #2c2734;
+    margin: 0;
+    margin-bottom: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.ova-heading .sub_title {
+    font-size: 30px;
+    display: grid;
+    line-height: 40px;
+    font-weight: 400;
+    /* display: inline-block; */
+    margin: 0;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn-orange {
+    background-color: darkorange;
+    color: white;
+    border-radius: 20px; /* Adjust as needed for the desired button curve */
+  }
+  
+  .btn-orange:hover {
+    background-color: darkorange; /* Change hover color if needed */
+  }
+  

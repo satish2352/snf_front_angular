@@ -1,0 +1,143 @@
+@media (max-width: 767px) {
+    .ova_nav {
+        /* Mobile styles */
+        display: none;
+        /* Initially hide the menu on mobile */
+    }
+
+    .ova_nav.nav-open {
+        /* Styles for the open state */
+        display: block;
+        /* Show the menu when open */
+    }
+}
+
+#NAVBAR_HERE {
+    height: 80px;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+    position: fixed;
+    right: 10px;
+    top: 4.2%;
+    transform: translateY(-50%);
+    z-index: 999;
+    /* Ensure toggle button is above other content */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (min-width: 576px) {
+    .navbar-brand {
+        margin-right: 60px;
+        /* Adjust as needed */
+
+    }
+
+    .navbar-toggler {
+        top: 25px;
+        right: 12px;
+        /* Adjust as needed */
+    }
+}
+
+
+@media (max-width: 575px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        /* Menu starts off-screen on the left */
+        width: 80%;
+        /* Adjust as needed */
+        height: 100vh;
+        background-color: #fff;
+        /* Background color of the collapsed menu */
+        z-index: 1000;
+        /* Ensure collapsed menu is above other content */
+        transition: left 0.2s ease;
+        /* Add smooth transition */
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        /* Show menu by bringing it into view */
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: justify;
+        /* Center items in the collapsed menu */
+        margin-top: 50px;
+        /* Adjust vertical spacing */
+    }
+
+    .navbar-nav .nav-item {
+        margin-top: 20px;
+        /* Adjust vertical spacing between menu items */
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        color: orange;
+    }
+
+
+    @media (min-width: 576px) and (max-width: 992px) {
+        .navbar-collapse {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            /* Menu starts off-screen on the left */
+            width: 80%;
+            /* Adjust as needed */
+            height: 100vh;
+            background-color: #fff;
+            /* Background color of the collapsed menu */
+            z-index: 1000;
+            /* Ensure collapsed menu is above other content */
+            transition: left 0.2s ease;
+            /* Add smooth transition */
+        }
+
+        .navbar-collapse.show {
+            left: 0;
+            /* Show menu by bringing it into view */
+        }
+
+        .navbar-nav {
+            width: 100%;
+            text-align: justify;
+            /* Center items in the collapsed menu */
+            margin-top: 50px;
+            /* Adjust vertical spacing */
+        }
+
+        .navbar-nav .nav-item {
+            margin-top: 20px;
+            /* Adjust vertical spacing between menu items */
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            color: orange;
+        }
+    }
+
+}

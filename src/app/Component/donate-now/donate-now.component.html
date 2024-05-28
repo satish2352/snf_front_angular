@@ -1,0 +1,60 @@
+<app-header></app-header>
+
+<div class="donation-container">
+    <div class="donation-details">
+        <!-- <h2 style="text-align: center;"><b>DONATE NOW</b></h2> -->
+        <div class="donate-header">
+            <img src="assets/img/SNF new logo 2020.jpeg">
+            <h2><b>DONATE NOW</b></h2>
+        </div>
+        <hr class="full-width-divider">
+        <h3 style="text-align: center;">THANK YOU FOR YOUR WISH TO DONATE</h3>
+        <p style="color: rgb(0, 0, 139);text-align: center;">Social Networking Forum</p>
+        <p class="test-p" style="text-align: center;">Registered Under Indian Public Trust Act 1950
+            Reg. No. F-15528 - Nashik</p>
+        <p style="text-align: center;">Societies Registration Act 1860
+            Reg. No. MAH/3041/N</p>
+        <p style="text-align: center;"> Under Section 12AA Of The Income Tax Act 1961
+            1086/493/2016-17/7751</p>
+
+        <h3 style="text-align: center;">BANK ACCOUNT DETAILS</h3>
+        <hr class="full-width-divider">
+        <h3 style="text-align: center; color: black;">Please Transfer Your Donation In Any One Of The Following Bank Accounts</h3>
+
+        <div class="bank-details" style="text-align: center;">
+            <h4>{{ banks[0].bankName }}</h4>
+            <p><strong>Account Name:</strong> {{ banks[0].accountName }}</p>
+            <p><strong>Account Number:</strong> {{ banks[0].accountNumber }}</p>
+            <p><strong>Account Type:</strong> {{ banks[0].accountType }}</p>
+            <p><strong>IFSC Code:</strong> {{ banks[0].ifscCode }}</p>
+            <p><strong>MICR Code:</strong> {{ banks[0].micrCode }}</p>
+            <hr class="full-width-divider">
+        </div>
+
+        <div class="bank-details" style="text-align: center;">
+            <h4>{{ banks[1].bankName }}</h4>
+            <p><strong>Account Name:</strong> {{ banks[1].accountName }}</p>
+            <p><strong>Account Number:</strong> {{ banks[1].accountNumber }}</p>
+            <p><strong>Account Type:</strong> {{ banks[1].accountType }}</p>
+            <p><strong>IFSC Code:</strong> {{ banks[1].ifscCode }}</p>
+            <p><strong>MICR Code:</strong> {{ banks[1].micrCode }}</p>
+            <hr>
+        </div>
+
+        <div class="bank-details" style="text-align: center;">
+            <h4>{{ banks[2].bankName }}</h4>
+            <p><strong>Account Name:</strong> {{ banks[2].accountName }}</p>
+            <p><strong>Account Number:</strong> {{ banks[2].accountNumber }}</p>
+            <p><strong>Account Type:</strong> {{ banks[2].accountType }}</p>
+            <p><strong>IFSC Code:</strong> {{ banks[2].ifscCode }}</p>
+            <p><strong>MICR Code:</strong> {{ banks[2].micrCode }}</p>
+            <hr>
+        </div>
+        <div class="buttons-container">
+            <button (click)="printPage()">PRINT</button>
+            <button (click)="downloadDetails()">DOWNLOAD</button>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

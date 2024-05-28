@@ -1,0 +1,1309 @@
+<div data-elementor-type="wp-page" data-elementor-id="201" class="elementor elementor-201">
+    <app-header></app-header>
+
+    <section>
+        <carousel>
+            <slide *ngFor="let item of carrosalData">
+                <img [src]="'http://localhost:8000/uploads/' + item.imageUrl" [alt]="item.name"
+                    style="height: 600px; width: 100%;">
+            </slide>
+        </carousel>
+    </section>
+
+
+    <!-- 2 Cards  -->
+    <section
+        class=" elementor-section elementor-top-section elementor-element elementor-element-500d24f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="500d24f" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d086ebf asting_carosel_right"
+                data-id="d086ebf" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    
+                        <div class="elementor-widget-container">
+                            <div class="ova-heading">
+                                <h4 class="sub_title thrid_font">Help the People</h4>
+                                <h2 class="title second_font">Social Networking Forum</h2>
+                            </div>
+                        </div>
+                    <!-- <div class="container mt-4">
+                        <div class="row">                           
+                            <div class="col-md-6 mb-4">
+                                <div class="card custom-card-container">
+                                    <img src="../../../assets/img/Home_Page/2 help the people (1).png"
+                                        class="card-img-top custom-card-img" alt="Image 1">
+                                    <div class="card-body">
+                                        <h3 class="card-title custom-card-title">MANY VILLAGES MADE SELF-SUFFICIENT BY
+                                            SOCIAL NETWORKING FORUM</h3>
+                                        <ul>
+                                            <li>Gadhaipada: Taluka Peth. <br>
+                                                District: Nashik, Population 350. <br>
+                                                Scheme supported by: Storewell Company,
+                                                Nashik.</li>
+                                            <span id="dotsi">
+                                                <li>Torangan: Taluka Tryambakeshwar. <br>
+                                                    District: Nashik, Population 2100. <br>
+                                                    Scheme supported by: Social Media
+                                                    youth.</li>
+                                                <li>Shevkhandi, Fanas pada, Khotre pada: Taluka Peth Tehsil. <br>
+                                                    District: Nashik, Population 2100. <br>
+                                                    Scheme supported by: Indian Association, Dermatology association.
+                                                </li>
+
+
+                                                <li>Vadpada: Taluka Peth. <br>
+                                                    Nashik Population – 600. <br>
+                                                    Scheme Supported by: social media youngsters.</li>
+
+                                                <li>Hedpada: Taluka Tryambakeshwar. <br>
+                                                    District - Nashik Population – 450 <br>
+                                                    Scheme Supported by: Medicos in Nashik District.</li>
+                                            </span><span id="morei"></span>
+                                            <button type="button" class="btn btn-outline-dark"
+                                                (click)="toggleReadMorei()" id="myBtni">Read more</button>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                      
+
+                            <div class="col-md-6 mb-4">
+                                <div class="card custom-card-container">
+                                    <img src="../../../assets/img/Home_Page/2 help the people.png"
+                                        class="card-img-top custom-card-img" alt="Image 2">
+                                    <div class="card-body">
+                                        <h3 class="card-title custom-card-title mb-0">INSTEAD OF SEARCHING WATER IN
+                                            JUNGLES,
+                                            NOW WE CAN STUDY...BUT WHAT
+                                            ABOUT</h3>
+                                        <p class="text-justify mt-2">Helping out some villages is not all. The forum has
+                                            many
+                                            more villages on the
+                                            work list. However, we need
+                                            generous donors and corporations across the nations in order to raise funds.
+                                            All <span id="dotsii">we ask for is a
+                                                wholehearted participation and help in any form. We call out to all the
+                                                respected citizens from all the
+                                                sectors and also to the corporate companies who could be of great help
+                                                with
+                                                their CSR donations. Clean
+                                                drinking water is the right of every person and we are committed to
+                                                providing it for them. Together We Can
+                                                Bring Change. YES WE CAN !! Team SNF.
+                                            </span><span id="moreii"></span>
+                                            <button type="button" class="btn btn-outline-dark"
+                                                (click)="toggleReadMoreii()" id="myBtnii">Read more</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12" *ngFor="let item of Home_2_Cards_Data">
+                                <div class="card carddesign ">
+                                    <img class="rounded img-fluid carddesign-img-hover"
+                                        [src]="'http://localhost:8000/uploads/' + item.imageUrl" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3
+                                            class="m-0 text-black card-title text-center fw-bold bg-secondary-custom text-white-custom carddesign-title-hover">
+                                            {{ item.name2 }}</h3>
+                                        <p class="m-3 card-text text-black text-center font-weight-normal text-justify lh-base truncate bg-info-custom text-white-custom carddesign-text-hover"
+                                            [ngClass]="{'show-all': item.showFullPara2cards}">{{ item.para2 }}</p>
+                                        <div class="text-center">
+                                            <button class="btn btn-primary btn-read-more"
+                                                (click)="toggleFullPara2cards(item)"
+                                                *ngIf="!item.showFullPara2cards">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SOCIAL NETWORKING FORUM  -->
+    <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-ac8e6d1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="ac8e6d1" data-element_type="section"
+        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-background-overlay"></div>
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-858254f"
+                data-id="858254f" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-282e947 elementor-widget elementor-widget-ova_heading"
+                        data-id="282e947" data-element_type="widget" data-widget_type="ova_heading.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-heading">
+                                <h4 class="sub_title thrid_font">Helping Today</h4>
+                                <h2 class="title second_font">SOCIAL NETWORKING FORUM</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-element elementor-element-d8c566f elementor-widget elementor-widget-ova_icon_box"
+                        data-id="d8c566f" data-element_type="widget" data-widget_type="ova_icon_box.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-icon-box">
+                                <div class="img-animation"> <img decoding="async" src="../../../assets/img/arrows.png"
+                                        alt=""></div>
+                                <div class="icon-box-content-video video-btn" data-toggle="modal"
+                                    src="../../../assets/img/SNF new logo 2020.jpeg" data-target="#videoModal"><img
+                                        src="../../../assets/img/SNF new logo 2020.jpeg" alt=""></div>
+                                <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body"> <button type="button" class="close"
+                                                    data-dismiss="modal" aria-label="Close"> <span
+                                                        aria-hidden="true">&times;</span> </button>
+                                                <div class="embed-responsive embed-responsive-16by9"> <iframe
+                                                        class="embed-responsive-item" id="video"
+                                                        allow="autoplay"></iframe></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7755ce8"
+                data-id="7755ce8" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-3903e2e elementor-widget elementor-widget-ova_list_icon_transform"
+                        data-id="3903e2e" data-element_type="widget" data-widget_type="ova_list_icon_transform.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-list-icon-transform">
+                                <ul>
+                                    <li>
+                                        <div class="list-text">
+                                            <h4 class="title">Social Networking Forum</h4>
+                                            <p class="text">While social media was used to spread religious and
+                                                political unrest on a large scale, "Social Networking For Social Cause"
+                                                movement was founded by Pramod Gopalrao Gaikwad in the year 2010 on
+                                                Facebook. This informal movement was later on instituionalised as
+                                                'Social Networking Forum'. The movement has received great response from
+                                                the social net-workers across the world and through this initiative,
+                                                hundreds of projects are undertaken and implemented.</p>
+                                            <div class="elementor-widget-container"
+                                                style="padding-top: 20px; padding-bottom: -5px;">
+                                                <div class="ova-btn"> <a routerLink="/medianewspapers" class="btn">Read More </a></div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                    <li>
+                                        <div class="list-text">
+                                            <h4 class="title">OUR ON GOING PROJECTS</h4>
+                                            <p class="text">Our goal is to supply clean water to people who can
+                                                not access to safe water.</p>
+                                            <div class="elementor-widget-container"
+                                                style="padding-top: 20px; padding-bottom: -5px;">
+                                                <div class="ova-btn"> <a routerLink="/DonateNow" class="btn"> Donate Now </a></div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- From the Blog News & Articles -->
+    <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-f87b674 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="f87b674" data-element_type="section"
+        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-27ee8be"
+                data-id="27ee8be" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-aca9f2e elementor-widget elementor-widget-shortcode"
+                        data-id="aca9f2e" data-element_type="widget" data-widget_type="shortcode.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-shortcode">
+                                <script>(function () {
+                                        window.mc4wp = window.mc4wp || {
+                                            listeners: [],
+                                            forms: {
+                                                on: function (evt, cb) {
+                                                    window.mc4wp.listeners.push(
+                                                        {
+                                                            event: evt,
+                                                            callback: cb
+                                                        }
+                                                    );
+                                                }
+                                            }
+                                        }
+                                    })();</script>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feebback -->
+
+    <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-b198359 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="b198359" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-51a0e3a"
+                data-id="51a0e3a" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-a545222 elementor-widget elementor-widget-ova_heading"
+                        data-id="a545222" data-element_type="widget" data-widget_type="ova_heading.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-heading">
+                                <h4 class="sub_title thrid_font">From the Blog</h4>
+                                <h2 class="title second_font">News & Articles</h2>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 mb-4" *ngFor="let item of newsData">
+                                        <div class="card" id="CARD_IMG_dynamically">
+                                            <img class="img-fluid rounded" [src]="'http://localhost:8000/uploads/' + item.imageUrl"
+                                                alt="Card image cap">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-bc40f4b"
+                data-id="bc40f4b" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-1e49532 elementor-align-right elementor-tablet-align-right elementor-mobile-align-left elementor-widget elementor-widget-button"
+                        data-id="1e49532" data-element_type="widget" data-widget_type="button.default">
+                        <div class="elementor-widget-container">
+                            <div class=" elementor-button-wrapper"> <a
+                                    class="elementor-button elementor-button-link elementor-size-xl" routerLink="/medianewspapers"> <span
+                                        class="elementor-button-content-wrapper">
+                                        <span class="elementor-button-text">See All</span> 
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-bc40f4b"
+                data-id="bc40f4b" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-1e49532 elementor-align-right elementor-tablet-align-right elementor-mobile-align-left elementor-widget elementor-widget-button"
+                        data-id="1e49532" data-element_type="widget" data-widget_type="button.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-button-wrapper"> <a
+                                    class="elementor-button elementor-button-link elementor-size-xl" routerLink="/medianewspapers"> <span
+                                        class="elementor-button-content-wrapper">
+                                        <span class="elementor-button-text">See All News</span> </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+    <!-- Design 4 cards -->
+    <!-- <section>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="rounded-img">
+                            <img src="../../../assets/img/Home_Page/CLEAN WATER PROJECT (2).jpg" class="card-img-top"
+                                alt="Top Image 1">
+                            <div class="social-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-yahoo"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title mt-1">CLEAN WATER PROJECT</h3>
+                            <p class="card-text text-justify mt-2 lh-base">SNF Pattern, An Initiative Of Social
+                                Networking Forum
+                                a long-term, cost-effective
+                                solution for water scarcity in difficult terrains... 10 Villages are made water
+                                self-sufficient in 2 years... Need to reach 40 more villages</p>
+                            <div class="">
+                                <a href="#" class="btn btn-primary btn-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="rounded-img">
+                            <img src="../../../assets/img/Home_Page/JAWAN.jpg" class="card-img-top" alt="Top Image 2">
+                            <div class="social-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-yahoo"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title mt-1">SHAHID JAWAN FUND</h3>
+                            <p class="card-text text-justify mt-2 lh-base">The fund aims towards providing monetary
+                                relief to
+                                the families of
+                                soldiers who lost
+                                their lives during service to the nation. The fundraising started in 2013 to imbibe the
+                                importance
+                                of patriotism <span id="dots"> in the young generation of India through social
+                                    media.</span><span id="more"></span>
+
+                            </p>
+
+                            <div class="btn-container">
+                                <a type="button" class="btn btn-outline-dark btn-custom" (click)="toggleReadMore()"
+                                    id="myBtn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="rounded-img">
+                            <img src="../../../assets/img/Home_Page/RURAL DEVELOPMENT.jpg" class="card-img-top"
+                                alt="Top Image 3">
+                            <div class="social-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-yahoo"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title mt-1">RURAL & TRIBAL DEVELOPMENT</h3>
+                            <p class="card-text text-justify mt-2 lh-base">In spite of ample qualities and hardworking
+                                nature
+                                people in rural and tribal areas lack behind just because of availability of
+                                opportunities. Social networking forum <span id="dots3">is working
+                                    on creating such
+                                    opportunities by supporting them in education, health, and legal sector.</span><span
+                                    id="more3"></span>
+                            </p>
+                            <div class="btn-container">
+                                <a type="button" class="btn btn-outline-dark btn-custom" (click)="toggleReadMore3()"
+                                    id="myBtn3">Read
+                                    More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="rounded-img">
+                            <img src="../../../assets/img/Home_Page/ENVIRNOMENT.jpg" class="card-img-top"
+                                alt="Top Image 4">
+                            <div class="social-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-yahoo"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title mt-1 ">ENVIROMENTAL CONSERVATION</h3>
+                            <p class="card-text text-justify mt-2 lh-base">The problem of degrading forest cover and
+                                increasing
+                                pollution has been addressed by the social networking forum by organizing tree
+                                plantation drives. The forum began handling larger <span id="dots4">
+                                    projects like mass afforestation, river pollution issues and
+                                    several others of its kind.</span><span id="more4"></span>
+
+                            </p>
+                            <div class="btn-container">
+                                <a type="button" class="btn btn-outline-dark btn-custom" (click)="toggleReadMore4()"
+                                    id="myBtn4">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12" *ngFor="let item of Home_4_Cards_Data">
+                <div class="card mb-3">
+                    <img class="rounded img-fluid" [src]="'http://localhost:8000/uploads/' + item.imageUrl"
+                        alt="Card image cap">
+
+                    <div class="card-body">
+                        <h3 class="mb-2 m-0 card-title text-center fw-bold  text-black carddesign-title-hover">{{
+                            item.name4 }}</h3>
+                        <p class="mt-0 card-text text-center font-weight-normal text-justify lh-base truncate text-black carddesign-title-hover"
+                            [ngClass]="{'show-all': item.showFullPara4cards}">{{ item.para4 }}</p>
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-read-more" (click)="toggleFullPara4cards(item)"
+                                *ngIf="!item.showFullPara4cards">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-8ffa075 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="8ffa075" data-element_type="section"
+        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-d43eee5"
+                data-id="d43eee5" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated ">
+                    <div class="elementor-element elementor-element-0865fc1 elementor-widget elementor-widget-ova_avatar "
+                        data-id="0865fc1" data-element_type="widget" data-widget_type="ova_avatar.default">
+                        <div class="elementor-widget-container ">
+                            <div class="ova-avatar ok">
+                                <div class="avatar-img"> <a href="#" target="_blank"> <img decoding="async"
+                                            src="https://www.socialforumindia.com/assets/images/causes/wa.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="avatar-content">
+                                    <div class="avatar-social">
+                                        <ul>
+                                            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="avatar-name d-flex justify-content-center align-items-justify" style="height: auto;"> <a href="#">Clean Our Projects</a></div>
+                                    <div class="avatar-job alp" >
+                                        <p  style="height: auto;">SNF Pattern, An Initiative Of Social Networking Forum ...a long-term, cost
+                                            effective solution for water scarcity in difficult terrains... 10 Villages
+                                            are made water self-sufficient in 2 years... Need to reach 40 more villages
+                                        </p> 
+                                    </div>
+                                    <div _ngcontent-ng-c1959903385="" class="ova-btn"><a _ngcontent-ng-c1959903385=""
+                                            href="#" class="btn">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-915c4ea"
+                data-id="915c4ea" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated ">
+                    <div class="elementor-element elementor-element-7f5e8c1 elementor-widget elementor-widget-ova_avatar "
+                        data-id="7f5e8c1" data-element_type="widget" data-widget_type="ova_avatar.default">
+                        <div class="elementor-widget-container ">
+                            <div class="ova-avatar ok">
+                                <div class="avatar-img"> <a href="#" target="_blank"> <img decoding="async"
+                                            src="https://www.socialforumindia.com/assets/images/causes/tribal.png"
+                                            alt=""> </a>
+                                </div>
+                                <div class="avatar-content">
+                                    <div class="avatar-social">
+                                        <ul>
+                                            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="avatar-name d-flex justify-content-center align-items-justify" style="height: auto;"> <a href="#">Rural & tribal Development</a></div>
+                                    <div class="avatar-job alp">
+                                        <p style="height: auto;">In spite of ample qualities and hardworking nature people in rural and tribal
+                                            areas lack behind just because of availability of opportunities. Social
+                                            networking forum is working on creating such opportunities by supporting
+                                            them in education, health and legal sector.</p>
+                                    </div>
+
+                                    <div _ngcontent-ng-c1959903385="" class="ova-btn"><a _ngcontent-ng-c1959903385=""
+                                            href="#" class="btn text-center">Read More</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-e917ac9"
+                data-id="e917ac9" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated ">
+                    <div class="elementor-element elementor-element-685623c elementor-widget elementor-widget-ova_avatar"
+                        data-id="685623c" data-element_type="widget" data-widget_type="ova_avatar.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-avatar ok">
+                                <div class="avatar-img"> <a href="#" target="_blank"> <img decoding="async"
+                                            src="https://www.socialforumindia.com/assets/images/causes/jawan.png                                            "
+                                            alt=""> </a>
+                                </div>
+                                <div class="avatar-content">
+                                    <div class="avatar-social">
+                                        <ul>
+                                            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="avatar-name d-flex justify-content-center align-items-center" style="height: 70px;"> <a href="#">Shahid Jawan Fund</a></div>
+                                    <div class="avatar-job alp" >
+                                        <p>The fund aims towards providing monetary relief to the families of soldiers
+                                            who lost their lives during service to the nation. The fundraising started
+                                            in 2013 to imbibe the importance of patriotism in the young generation of
+                                            India through social media.</p>
+                                    </div>
+                                    <div _ngcontent-ng-c1959903385="" class="ova-btn"><a _ngcontent-ng-c1959903385=""
+                                            href="#" class="btn">Read More</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6e0f4a5"
+                data-id="6e0f4a5" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated ">
+                    <div class="elementor-element elementor-element-6cdf1fd elementor-widget elementor-widget-ova_avatar"
+                        data-id="6cdf1fd" data-element_type="widget" data-widget_type="ova_avatar.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-avatar ok">
+                                <div class="avatar-img"> <a href="#" target="_blank"> <img decoding="async"
+                                            src="https://www.socialforumindia.com/assets/images/causes/tre.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="avatar-content">
+                                    <div class="avatar-social">
+                                        <ul>
+                                            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="avatar-name d-flex justify-content-center align-items-center" style="height: 70px;"> <a href="#">Enviromental Conservation</a></div>
+                                    <div class="avatar-job alp" >
+                                        <p>The problem of degrading forest cover and increasing pollution has been
+                                            addressed by the social networking forum by organizing tree plantation
+                                            drives. The forum began handling larger projects like mass afforestation,
+                                            river pollution issues and several others of its kind.</p>
+                                    </div>
+                                    <div _ngcontent-ng-c1959903385="" class="ova-btn"><a _ngcontent-ng-c1959903385=""
+                                            href="#" class="btn">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-41cb68d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="41cb68d" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cf2eba7"
+                data-id="cf2eba7" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-8d465a0 elementor-widget elementor-widget-ova_blog"
+                        data-id="8d465a0" data-element_type="widget" data-widget_type="ova_blog.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-blog-element">
+                                <div class="ova-blog grid grid_medium ">
+                                    <article class="post-wrap type-grid d-flex md-3 lg-3 sm-6">
+                                        <div class="wrap-article">
+                                            <div class="post-media"> <img loading="lazy" decoding="async" width="950"
+                                                    height="700"
+                                                    src="https://www.socialforumindia.com/assets/images/causes/wa.png"
+                                                    class="img-responsive wp-post-image" alt=""
+                                                    srcset="https://www.socialforumindia.com/assets/images/causes/wa.png 950w, https://www.socialforumindia.com/assets/images/causes/wa.png 300w, https://www.socialforumindia.com/assets/images/causes/wa.png 768w, https://www.socialforumindia.com/assets/images/causes/wa.png 600w"
+                                                    sizes="(max-width: 950px) 100vw, 950px" /></div>
+                                            <div class="ova-content">
+
+                                                <div class="post-title">
+                                                    <h2 class="post-title"> <a href="#" rel="bookmark"
+                                                            title="Best solutions to help the homeless">
+                                                            CLEAN WATER PROJECT</a></h2>
+                                                </div>
+                                                <div class="post-footer">
+                                                    <p class="text">SNF Pattern, An
+                                                        Initiative Of Social Networking Forum ...a long-term, cost
+                                                        effective solution for water scarcity in difficult terrains...
+                                                        10 Villages are made water self-sufficient in 2 years... Need to
+                                                        reach 40 more villages
+                                                    </p>
+                                                </div>
+                                                <div class="ova-btn" style="padding-left: 40px;"> <a href="#"
+                                                        class="btn ">Read More</a></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-wrap type-grid d-flex md-3 lg-3 sm-6">
+                                        <div class="wrap-article">
+                                            <div class="post-media"> <img loading="lazy" decoding="async" width="950"
+                                                    height="700"
+                                                    src="	https://www.socialforumindia.com/assets/images/causes/jawan.png"
+                                                    class="img-responsive wp-post-image" alt=""
+                                                    srcset="https://www.socialforumindia.com/assets/images/causes/jawan.png 950w, 	https://www.socialforumindia.com/assets/images/causes/jawan.png 300w, 	https://www.socialforumindia.com/assets/images/causes/jawan.png 768w, 	https://www.socialforumindia.com/assets/images/causes/jawan.png 600w"
+                                                    sizes="(max-width: 950px) 100vw, 950px" /></div>
+                                            <div class="ova-content">
+
+                                                <div class="post-title">
+                                                    <h2 class="post-title"> <a href="#" rel="bookmark"
+                                                            title="Best solutions to help the homeless">
+                                                            SHAHID JAWAN FUND</a></h2>
+                                                </div>
+                                                <div class="post-footer">
+                                                    <p class="text">The fund aims towards providing monetary relief to
+                                                        the families of soldiers who lost their lives during service to
+                                                        the nation. The fundraising started in 2013 to imbibe the
+                                                        importance of patriotism in the young generation of India
+                                                        through social media.
+                                                    </p>
+                                                </div>
+                                                <div class="ova-btn" style="padding-left: 40px;"> <a href="#"
+                                                        class="btn ">Read More</a></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-wrap type-grid d-flex md-3 lg-3 sm-6">
+                                        <div class="wrap-article">
+                                            <div class="post-media"> <img loading="lazy" decoding="async" width="950"
+                                                    height="700"
+                                                    src="	https://www.socialforumindia.com/assets/images/causes/tribal.png"
+                                                    class="img-responsive wp-post-image" alt=""
+                                                    srcset="https://www.socialforumindia.com/assets/images/causes/tribal.png 950w, 	https://www.socialforumindia.com/assets/images/causes/tribal.png 300w, 	https://www.socialforumindia.com/assets/images/causes/tribal.png 768w, 	https://www.socialforumindia.com/assets/images/causes/tribal.png 600w"
+                                                    sizes="(max-width: 950px) 100vw, 950px" /></div>
+                                            <div class="ova-content">
+
+                                                <div class="post-title">
+                                                    <h2 class="post-title"> <a href="#" rel="bookmark"
+                                                            title="Best solutions to help the homeless">
+                                                            RURAL & TRIBAL DEVELOPMENT</a></h2>
+                                                </div>
+                                                <div class="post-footer">
+                                                    <p class="text">In spite of ample qualities and hardworking nature
+                                                        people in rural and tribal areas lack behind just because of
+                                                        availability of opportunities. Social networking forum is
+                                                        working on creating such opportunities by supporting them in
+                                                        education, health and legal sector.
+                                                    </p>
+                                                </div>
+                                                <div class="ova-btn" style="padding-left: 40px;"> <a href="#"
+                                                        class="btn ">Read More</a></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-wrap type-grid d-flex md-3  lg-3 sm-6">
+                                        <div class="wrap-article">
+                                            <div class="post-media"> <img loading="lazy" decoding="async" width="950"
+                                                    height="700"
+                                                    src="	https://www.socialforumindia.com/assets/images/causes/tre.png"
+                                                    class="img-responsive wp-post-image" alt=""
+                                                    srcset="https://www.socialforumindia.com/assets/images/causes/tre.png 950w, 	https://www.socialforumindia.com/assets/images/causes/tre.png 300w, 	https://www.socialforumindia.com/assets/images/causes/tre.png 768w, 	https://www.socialforumindia.com/assets/images/causes/tre.png 600w"
+                                                    sizes="(max-width: 950px) 100vw, 950px" /></div>
+                                            <div class="ova-content">
+
+                                                <div class="post-title">
+                                                    <h2 class="post-title"> <a href="#" rel="bookmark"
+                                                            title="Best solutions to help the homeless">
+                                                            ENVIROMENTAL CONSERVATION</a></h2>
+                                                </div>
+                                                <div class="post-footer">
+                                                    <p class="text">The problem of degrading forest cover and increasing
+                                                        pollution has been addressed by the social networking forum by
+                                                        organizing tree plantation drives. The forum began handling
+                                                        larger projects like mass afforestation, river pollution issues
+                                                        and several others of its kind.
+                                                    </p>
+                                                </div>
+                                                <div class="ova-btn" style="padding-left: 40px;"> <a href="#"
+                                                        class="btn ">Read More</a></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Feedback -->
+    <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-f87b674 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="f87b674" data-element_type="section"
+        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-27ee8be"
+                data-id="27ee8be" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-aca9f2e elementor-widget elementor-widget-shortcode"
+                        data-id="aca9f2e" data-element_type="widget" data-widget_type="shortcode.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-shortcode">
+                                <script>(function () {
+                                        window.mc4wp = window.mc4wp || {
+                                            listeners: [],
+                                            forms: {
+                                                on: function (evt, cb) {
+                                                    window.mc4wp.listeners.push(
+                                                        {
+                                                            event: evt,
+                                                            callback: cb
+                                                        }
+                                                    );
+                                                }
+                                            }
+                                        }
+                                    })();</script>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feebback -->
+
+    <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-b198359 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="b198359" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-51a0e3a"
+                data-id="51a0e3a" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-a545222 elementor-widget elementor-widget-ova_heading"
+                        data-id="a545222" data-element_type="widget" data-widget_type="ova_heading.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-heading">
+                                <h4 class="sub_title thrid_font">Feebback</h4>
+                                <h2 class="title second_font">Bringing thousands of smile...!</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-bc40f4b"
+                data-id="bc40f4b" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-1e49532 elementor-align-right elementor-tablet-align-right elementor-mobile-align-left elementor-widget elementor-widget-button"
+                        data-id="1e49532" data-element_type="widget" data-widget_type="button.default">
+                        <div class="elementor-widget-container">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Design 4 cards -->
+    <!-- <section>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="rounded-img">
+                            <img src="../../../assets/img/Home_Page/CLEAN WATER PROJECT (2).jpg" class="card-img-top"
+                                alt="Top Image 1">
+                            <div class="social-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-yahoo"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title mt-1">CLEAN WATER PROJECT</h3>
+                            <p class="card-text text-justify mt-2 lh-base">SNF Pattern, An Initiative Of Social
+                                Networking Forum
+                                a long-term, cost-effective
+                                solution for water scarcity in difficult terrains... 10 Villages are made water
+                                self-sufficient in 2 years... Need to reach 40 more villages</p>
+                            <div class="">
+                                <a href="#" class="btn btn-primary btn-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="rounded-img">
+                            <img src="../../../assets/img/Home_Page/JAWAN.jpg" class="card-img-top" alt="Top Image 2">
+                            <div class="social-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-yahoo"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title mt-1">SHAHID JAWAN FUND</h3>
+                            <p class="card-text text-justify mt-2 lh-base">The fund aims towards providing monetary
+                                relief to
+                                the families of
+                                soldiers who lost
+                                their lives during service to the nation. The fundraising started in 2013 to imbibe the
+                                importance
+                                of patriotism <span id="dots"> in the young generation of India through social
+                                    media.</span><span id="more"></span>
+
+                            </p>
+
+                            <div class="btn-container">
+                                <a type="button" class="btn btn-outline-dark btn-custom" (click)="toggleReadMore()"
+                                    id="myBtn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="rounded-img">
+                            <img src="../../../assets/img/Home_Page/RURAL DEVELOPMENT.jpg" class="card-img-top"
+                                alt="Top Image 3">
+                            <div class="social-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-yahoo"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title mt-1">RURAL & TRIBAL DEVELOPMENT</h3>
+                            <p class="card-text text-justify mt-2 lh-base">In spite of ample qualities and hardworking
+                                nature
+                                people in rural and tribal areas lack behind just because of availability of
+                                opportunities. Social networking forum <span id="dots3">is working
+                                    on creating such
+                                    opportunities by supporting them in education, health, and legal sector.</span><span
+                                    id="more3"></span>
+                            </p>
+                            <div class="btn-container">
+                                <a type="button" class="btn btn-outline-dark btn-custom" (click)="toggleReadMore3()"
+                                    id="myBtn3">Read
+                                    More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="rounded-img">
+                            <img src="../../../assets/img/Home_Page/ENVIRNOMENT.jpg" class="card-img-top"
+                                alt="Top Image 4">
+                            <div class="social-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-yahoo"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title mt-1 ">ENVIROMENTAL CONSERVATION</h3>
+                            <p class="card-text text-justify mt-2 lh-base">The problem of degrading forest cover and
+                                increasing
+                                pollution has been addressed by the social networking forum by organizing tree
+                                plantation drives. The forum began handling larger <span id="dots4">
+                                    projects like mass afforestation, river pollution issues and
+                                    several others of its kind.</span><span id="more4"></span>
+
+                            </p>
+                            <div class="btn-container">
+                                <a type="button" class="btn btn-outline-dark btn-custom" (click)="toggleReadMore4()"
+                                    id="myBtn4">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12" *ngFor="let item of Home_4_Cards_Data">
+                <div class="card mb-3">
+                    <img class="rounded img-fluid" [src]="'http://localhost:8000/uploads/' + item.imageUrl"
+                        alt="Card image cap">
+
+                    <div class="card-body">
+                        <h3 class="mb-2 m-0 card-title text-center fw-bold  text-black carddesign-title-hover">{{
+                            item.name4 }}</h3>
+                        <p class="mt-0 card-text text-center font-weight-normal text-justify lh-base truncate text-black carddesign-title-hover"
+                            [ngClass]="{'show-all': item.showFullPara4cards}">{{ item.para4 }}</p>
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-read-more" (click)="toggleFullPara4cards(item)"
+                                *ngIf="!item.showFullPara4cards">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-8ffa075 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="8ffa075" data-element_type="section"
+        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-d43eee5"
+                data-id="d43eee5" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated ">
+                    <div class="elementor-element elementor-element-0865fc1 elementor-widget elementor-widget-ova_avatar "
+                        data-id="0865fc1" data-element_type="widget" data-widget_type="ova_avatar.default">
+                        <div class="elementor-widget-container ">
+                            <div class="ova-avatar ok">
+                                <div class="avatar-img"> <a href="#" target="_blank"> <img decoding="async"
+                                            src="https://www.socialforumindia.com/assets/images/causes/wa.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="avatar-content">
+                                    <div class="avatar-social">
+                                        <ul>
+                                            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="avatar-name d-flex justify-content-center align-items-justify" style="height: auto;"> <a href="#">Clean Our Projects</a></div>
+                                    <div class="avatar-job alp" >
+                                        <p  style="height: auto;">SNF Pattern, An Initiative Of Social Networking Forum ...a long-term, cost
+                                            effective solution for water scarcity in difficult terrains... 10 Villages
+                                            are made water self-sufficient in 2 years... Need to reach 40 more villages
+                                        </p> 
+                                    </div>
+                                    <div _ngcontent-ng-c1959903385="" class="ova-btn"><a _ngcontent-ng-c1959903385=""
+                                            href="#" class="btn">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-915c4ea"
+                data-id="915c4ea" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated ">
+                    <div class="elementor-element elementor-element-7f5e8c1 elementor-widget elementor-widget-ova_avatar "
+                        data-id="7f5e8c1" data-element_type="widget" data-widget_type="ova_avatar.default">
+                        <div class="elementor-widget-container ">
+                            <div class="ova-avatar ok">
+                                <div class="avatar-img"> <a href="#" target="_blank"> <img decoding="async"
+                                            src="https://www.socialforumindia.com/assets/images/causes/tribal.png"
+                                            alt=""> </a>
+                                </div>
+                                <div class="avatar-content">
+                                    <div class="avatar-social">
+                                        <ul>
+                                            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="avatar-name d-flex justify-content-center align-items-justify" style="height: auto;"> <a href="#">Rural & tribal Development</a></div>
+                                    <div class="avatar-job alp">
+                                        <p style="height: auto;">In spite of ample qualities and hardworking nature people in rural and tribal
+                                            areas lack behind just because of availability of opportunities. Social
+                                            networking forum is working on creating such opportunities by supporting
+                                            them in education, health and legal sector.</p>
+                                    </div>
+
+                                    <div _ngcontent-ng-c1959903385="" class="ova-btn"><a _ngcontent-ng-c1959903385=""
+                                            href="#" class="btn text-center">Read More</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-e917ac9"
+                data-id="e917ac9" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated ">
+                    <div class="elementor-element elementor-element-685623c elementor-widget elementor-widget-ova_avatar"
+                        data-id="685623c" data-element_type="widget" data-widget_type="ova_avatar.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-avatar ok">
+                                <div class="avatar-img"> <a href="#" target="_blank"> <img decoding="async"
+                                            src="https://www.socialforumindia.com/assets/images/causes/jawan.png                                            "
+                                            alt=""> </a>
+                                </div>
+                                <div class="avatar-content">
+                                    <div class="avatar-social">
+                                        <ul>
+                                            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="avatar-name d-flex justify-content-center align-items-center" style="height: 70px;"> <a href="#">Shahid Jawan Fund</a></div>
+                                    <div class="avatar-job alp" >
+                                        <p>The fund aims towards providing monetary relief to the families of soldiers
+                                            who lost their lives during service to the nation. The fundraising started
+                                            in 2013 to imbibe the importance of patriotism in the young generation of
+                                            India through social media.</p>
+                                    </div>
+                                    <div _ngcontent-ng-c1959903385="" class="ova-btn"><a _ngcontent-ng-c1959903385=""
+                                            href="#" class="btn">Read More</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6e0f4a5"
+                data-id="6e0f4a5" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated ">
+                    <div class="elementor-element elementor-element-6cdf1fd elementor-widget elementor-widget-ova_avatar"
+                        data-id="6cdf1fd" data-element_type="widget" data-widget_type="ova_avatar.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-avatar ok">
+                                <div class="avatar-img"> <a href="#" target="_blank"> <img decoding="async"
+                                            src="https://www.socialforumindia.com/assets/images/causes/tre.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="avatar-content">
+                                    <div class="avatar-social">
+                                        <ul>
+                                            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+                                            <li> <a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="avatar-name d-flex justify-content-center align-items-center" style="height: 70px;"> <a href="#">Enviromental Conservation</a></div>
+                                    <div class="avatar-job alp" >
+                                        <p>The problem of degrading forest cover and increasing pollution has been
+                                            addressed by the social networking forum by organizing tree plantation
+                                            drives. The forum began handling larger projects like mass afforestation,
+                                            river pollution issues and several others of its kind.</p>
+                                    </div>
+                                    <div _ngcontent-ng-c1959903385="" class="ova-btn"><a _ngcontent-ng-c1959903385=""
+                                            href="#" class="btn">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-41cb68d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="41cb68d" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cf2eba7"
+                data-id="cf2eba7" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-8d465a0 elementor-widget elementor-widget-ova_blog"
+                        data-id="8d465a0" data-element_type="widget" data-widget_type="ova_blog.default">
+                        <div class="elementor-widget-container">
+                            <div class="ova-blog-element">
+                                <div class="ova-blog grid grid_medium ">
+                                    <article class="post-wrap type-grid d-flex md-3 lg-3 sm-6">
+                                        <div class="wrap-article">
+                                            <div class="post-media"> <img loading="lazy" decoding="async" width="950"
+                                                    height="700"
+                                                    src="https://www.socialforumindia.com/assets/images/causes/wa.png"
+                                                    class="img-responsive wp-post-image" alt=""
+                                                    srcset="https://www.socialforumindia.com/assets/images/causes/wa.png 950w, https://www.socialforumindia.com/assets/images/causes/wa.png 300w, https://www.socialforumindia.com/assets/images/causes/wa.png 768w, https://www.socialforumindia.com/assets/images/causes/wa.png 600w"
+                                                    sizes="(max-width: 950px) 100vw, 950px" /></div>
+                                            <div class="ova-content">
+
+                                                <div class="post-title">
+                                                    <h2 class="post-title"> <a href="#" rel="bookmark"
+                                                            title="Best solutions to help the homeless">
+                                                            CLEAN WATER PROJECT</a></h2>
+                                                </div>
+                                                <div class="post-footer">
+                                                    <p class="text">SNF Pattern, An
+                                                        Initiative Of Social Networking Forum ...a long-term, cost
+                                                        effective solution for water scarcity in difficult terrains...
+                                                        10 Villages are made water self-sufficient in 2 years... Need to
+                                                        reach 40 more villages
+                                                    </p>
+                                                </div>
+                                                <div class="ova-btn" style="padding-left: 40px;"> <a href="#"
+                                                        class="btn ">Read More</a></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-wrap type-grid d-flex md-3 lg-3 sm-6">
+                                        <div class="wrap-article">
+                                            <div class="post-media"> <img loading="lazy" decoding="async" width="950"
+                                                    height="700"
+                                                    src="	https://www.socialforumindia.com/assets/images/causes/jawan.png"
+                                                    class="img-responsive wp-post-image" alt=""
+                                                    srcset="https://www.socialforumindia.com/assets/images/causes/jawan.png 950w, 	https://www.socialforumindia.com/assets/images/causes/jawan.png 300w, 	https://www.socialforumindia.com/assets/images/causes/jawan.png 768w, 	https://www.socialforumindia.com/assets/images/causes/jawan.png 600w"
+                                                    sizes="(max-width: 950px) 100vw, 950px" /></div>
+                                            <div class="ova-content">
+
+                                                <div class="post-title">
+                                                    <h2 class="post-title"> <a href="#" rel="bookmark"
+                                                            title="Best solutions to help the homeless">
+                                                            SHAHID JAWAN FUND</a></h2>
+                                                </div>
+                                                <div class="post-footer">
+                                                    <p class="text">The fund aims towards providing monetary relief to
+                                                        the families of soldiers who lost their lives during service to
+                                                        the nation. The fundraising started in 2013 to imbibe the
+                                                        importance of patriotism in the young generation of India
+                                                        through social media.
+                                                    </p>
+                                                </div>
+                                                <div class="ova-btn" style="padding-left: 40px;"> <a href="#"
+                                                        class="btn ">Read More</a></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-wrap type-grid d-flex md-3 lg-3 sm-6">
+                                        <div class="wrap-article">
+                                            <div class="post-media"> <img loading="lazy" decoding="async" width="950"
+                                                    height="700"
+                                                    src="	https://www.socialforumindia.com/assets/images/causes/tribal.png"
+                                                    class="img-responsive wp-post-image" alt=""
+                                                    srcset="https://www.socialforumindia.com/assets/images/causes/tribal.png 950w, 	https://www.socialforumindia.com/assets/images/causes/tribal.png 300w, 	https://www.socialforumindia.com/assets/images/causes/tribal.png 768w, 	https://www.socialforumindia.com/assets/images/causes/tribal.png 600w"
+                                                    sizes="(max-width: 950px) 100vw, 950px" /></div>
+                                            <div class="ova-content">
+
+                                                <div class="post-title">
+                                                    <h2 class="post-title"> <a href="#" rel="bookmark"
+                                                            title="Best solutions to help the homeless">
+                                                            RURAL & TRIBAL DEVELOPMENT</a></h2>
+                                                </div>
+                                                <div class="post-footer">
+                                                    <p class="text">In spite of ample qualities and hardworking nature
+                                                        people in rural and tribal areas lack behind just because of
+                                                        availability of opportunities. Social networking forum is
+                                                        working on creating such opportunities by supporting them in
+                                                        education, health and legal sector.
+                                                    </p>
+                                                </div>
+                                                <div class="ova-btn" style="padding-left: 40px;"> <a href="#"
+                                                        class="btn ">Read More</a></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-wrap type-grid d-flex md-3  lg-3 sm-6">
+                                        <div class="wrap-article">
+                                            <div class="post-media"> <img loading="lazy" decoding="async" width="950"
+                                                    height="700"
+                                                    src="	https://www.socialforumindia.com/assets/images/causes/tre.png"
+                                                    class="img-responsive wp-post-image" alt=""
+                                                    srcset="https://www.socialforumindia.com/assets/images/causes/tre.png 950w, 	https://www.socialforumindia.com/assets/images/causes/tre.png 300w, 	https://www.socialforumindia.com/assets/images/causes/tre.png 768w, 	https://www.socialforumindia.com/assets/images/causes/tre.png 600w"
+                                                    sizes="(max-width: 950px) 100vw, 950px" /></div>
+                                            <div class="ova-content">
+
+                                                <div class="post-title">
+                                                    <h2 class="post-title"> <a href="#" rel="bookmark"
+                                                            title="Best solutions to help the homeless">
+                                                            ENVIROMENTAL CONSERVATION</a></h2>
+                                                </div>
+                                                <div class="post-footer">
+                                                    <p class="text">The problem of degrading forest cover and increasing
+                                                        pollution has been addressed by the social networking forum by
+                                                        organizing tree plantation drives. The forum began handling
+                                                        larger projects like mass afforestation, river pollution issues
+                                                        and several others of its kind.
+                                                    </p>
+                                                </div>
+                                                <div class="ova-btn" style="padding-left: 40px;"> <a href="#"
+                                                        class="btn ">Read More</a></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    
+
+
+    <!-- OUR SUPPORTERS  -->
+    <section>
+        <div class="container-fluid">
+            <div class="elementor-element elementor-element-dc0595c elementor-widget elementor-widget-ova_heading"
+                data-id="dc0595c" data-element_type="widget" data-widget_type="ova_heading.default">
+                <div class="elementor-widget-container mt-3">
+                    <div class="ova-heading">
+                        <h4 class="sub_title thrid_font">Happy People</h4>
+                        <h2 class="title second_font">OUR SUPPORTERS</h2>
+                    </div>
+                </div>
+
+                <marquee class="marquee" behavior="scroll" direction="left" scrollamount="6">
+                    <ng-container *ngFor="let item of support_data">
+                        <img [src]="'http://localhost:8000/uploads/' + item.imageUrl" alt="image"
+                            style="height: 140px; display: inline-block;" />
+                        &nbsp;&nbsp;
+                    </ng-container>
+                </marquee>
+
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</div>

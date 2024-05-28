@@ -1,0 +1,31 @@
+.scrollable-section {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+    /* Make the card full width on smaller screens */
+  }
+
+  .card-img-right {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio for the image */
+  }
+
+}
+@media only screen and (max-width: 380px) {
+
+  .card-img-right {
+    width: 100%;
+    height: auto;
+    margin-left: 60px;
+    /* Maintain aspect ratio for the image */
+  }
+
+
+
+}
