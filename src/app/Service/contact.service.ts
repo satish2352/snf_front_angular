@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactService {
 
-  private contactUrl = 'http://localhost:8000/contact'; // Replace with your actual API URL
+  private contactUrl = 'https://snfbackendfinal.sumagodemo.com/contact'; // Replace with your actual API URL
 
   constructor(private http: HttpClient) { }
 

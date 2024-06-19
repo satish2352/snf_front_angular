@@ -4,7 +4,7 @@
     <section>
         <carousel>
             <slide *ngFor="let item of carrosalData">
-                <img [src]="'http://localhost:8000/uploads/' + item.imageUrl" [alt]="item.name"
+                <img [src]="'https://snf.backend.socialforumindia.com/uploads/'" [alt]="item.name"
                     style="height: 600px; width: 100%;">
             </slide>
         </carousel>
@@ -106,7 +106,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12" *ngFor="let item of Home_2_Cards_Data">
                                 <div class="card carddesign ">
                                     <img class="rounded img-fluid carddesign-img-hover"
-                                        [src]="'http://localhost:8000/uploads/' + item.imageUrl" alt="Card image cap">
+                                        [src]="item.imageUrl" alt="Card image cap">
                                     <div class="card-body">
                                         <h3
                                             class="m-0 text-black card-title text-center fw-bold bg-secondary-custom text-white-custom carddesign-title-hover">
@@ -281,7 +281,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-12 mb-4" *ngFor="let item of newsData">
                                         <div class="card" id="CARD_IMG_dynamically">
-                                            <img class="img-fluid rounded" [src]="'http://localhost:8000/uploads/' + item.imageUrl"
+                                            <img class="img-fluid rounded" [src]="item.imageUrl"
                                                 alt="Card image cap">
                                            
                                         </div>
@@ -460,7 +460,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12 col-12" *ngFor="let item of Home_4_Cards_Data">
                 <div class="card mb-3">
-                    <img class="rounded img-fluid" [src]="'http://localhost:8000/uploads/' + item.imageUrl"
+                    <img class="rounded img-fluid" [src]="item.imageUrl"
                         alt="Card image cap">
 
                     <div class="card-body">
@@ -971,7 +971,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12 col-12" *ngFor="let item of Home_4_Cards_Data">
                 <div class="card mb-3">
-                    <img class="rounded img-fluid" [src]="'http://localhost:8000/uploads/' + item.imageUrl"
+                    <img class="rounded img-fluid" [src]="item.imageUrl"
                         alt="Card image cap">
 
                     <div class="card-body">
@@ -1296,7 +1296,7 @@
 
                 <marquee class="marquee" behavior="scroll" direction="left" scrollamount="6">
                     <ng-container *ngFor="let item of support_data">
-                        <img [src]="'http://localhost:8000/uploads/' + item.imageUrl" alt="image"
+                        <img [src]="item.imageUrl" alt="image"
                             style="height: 140px; display: inline-block;" />
                         &nbsp;&nbsp;
                     </ng-container>
