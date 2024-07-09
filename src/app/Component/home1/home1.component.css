@@ -19,8 +19,33 @@
 }
 .homepagenames{
     font-family: Abril Fatface;
+    font-size: 45px;
 }
+.dot {
+    height: 200px;
+    width: 200px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border-color: orange;
+    display: inline-block;
+  }
 
+  #ourimg{
+    height: 300px;
+   
+  }
+#newsarticle{
+    margin-top: 360px;
+}
+.newsarticle1{
+    text-align: center;
+    position: relative;
+}
+@media only screen and (max-width: 600px) {
+    #newsarticle{
+        margin-top: 5px;
+    }
+  }
 @media screen and (min-width: 480px) {
     .ok {
         height: 700px;
