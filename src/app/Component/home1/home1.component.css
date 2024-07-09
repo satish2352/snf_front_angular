@@ -13,6 +13,13 @@
     height: 75px;
 
 }
+.Hometitle{
+    font-family: Shadows Into Light;
+    color: #ff6d12;
+}
+.homepagenames{
+    font-family: Abril Fatface;
+}
 
 @media screen and (min-width: 480px) {
     .ok {

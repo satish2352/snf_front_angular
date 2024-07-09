@@ -318,7 +318,7 @@
 
             .elementor-3023 .elementor-element.elementor-element-3848f6f>.elementor-widget-container {
                 margin: 0px 0px 0px 0px;
-                 background-image: url("../../../assets/img/BANER.jpg");
+                background-image: url("../../../assets/img/BANER.jpg");
                 background-position: center center;
                 background-size: cover;
             }
@@ -566,8 +566,48 @@
             <br>
 
             <div class="HEAD_START">
-
                 <div class="container">
+                    <div class="card" style="border-radius: 50px;">
+                        <div class="card-header"
+                            style="background-color: #139F9F; border-radius: 50px 50px 0px 0px; color: white;">
+                            Shahid Jawan Fund
+                        </div>
+                        <div class="card-body" style="background-color: #BAEDED; border-radius: 0px 0px 50px 50px">
+                            <!-- <h5 class="card-title" style="border-radius: 0px 0px 50px 50px;"></h5> -->
+                            <img src="../../../assets/img/WHAT WE DO PAGE/ON GOING PROJECT/SHAHID_JAWAN_PROJECT/shahid jawan.jpg"
+                            class="figure-img img-fluid rounded" alt="..." width="300px"> 
+                            <p class="card-text" style="text-align: justify;">
+                                The year 2016 turned out to be rather unfortunate for the state of Maharashtra as
+                                famines
+                                hit the state on a large scale. The plight of the ruralites is heart-wrenching as they
+                                wander about for miles in search of water the social networking forum therefore decided
+                                to
+                                step in and help the people out of this miseries. Our team surveyed the worst hit /
+                                affected
+                                villages and called out for help through social media. The appeal was headed by several
+                                as
+                                the response was overwhelming. With the immense contributions and aid that poured in,
+                                the
+                                team took work immediately. Five villages were surveyed and the task to make these five
+                                villages self-sufficient and water abundant was completed within the five months from
+                                January 2016 to May 2016. Similar programs were carried out to self sufficethhree more
+                                such
+                                villages in the year 2017. our sincere efforts continues towards our mission as hundreds
+                                of
+                                appeals reach us every others day from various villages facing water scarcity. Based on
+                                the
+                                donations and aids that come in, the forum strives to take up more of such cases
+                            </p>
+                            <div class="text-end">
+                                <button type="button"
+                                    style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;"><b>Read
+                                        More</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="container">
                     <div class="card">
                         <div class="card-body">
                             <p id="Clean_Water"><b>Shahid Jawan Fund</b></p>
@@ -600,7 +640,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- <div class="container">
                     <p id="PROJECT_CARRIED"><b>Shahid Jawan Families Welfare Work Done By Social Networking Forum</b>
@@ -717,14 +757,15 @@
                 </div> -->
 
                 <div class="container">
-                    <p class="text-justify text-center" style="font-size: 36px; color: orange"><b>Shahid Jawan Families Welfare
+                    <p class="text-justify text-center" style="font-size: 36px; color: orange"><b>Shahid Jawan Families
+                            Welfare
                             Work Done By Social Networking Forum</b></p>
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-4"
                             *ngFor="let item of OnGoingProject_Shahid_Jawan_FundData">
                             <div class="card" id="CARD_IMG_dynamically">
-                                <img class="img-fluid rounded" [src]="'https://snf.backend.socialforumindia.com/uploads/'"
-                                    alt="Card image cap">
+                                <img class="img-fluid rounded"
+                                    [src]="'https://snf.backend.socialforumindia.com/uploads/'" alt="Card image cap">
                                 <p class="card-body card-text text-center" id="IMG_NAME_dynamically">{{ item.name }}</p>
                             </div>
                         </div>

@@ -26,8 +26,9 @@
     font-size: 36px;
 }
 
-#para {
-    text-align: justify;
+#para1 {
+    background-color: #BAEDED;
+    color: black;
     padding-right: 10px;
 }
 
