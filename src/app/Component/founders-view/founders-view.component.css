@@ -8,6 +8,24 @@
   border: 15px solid #fffdfd;box-shadow: 0px 4px 4px 0px #00000040;
 }
 
+.dot {
+  height: 220px;
+  width: 220px;
+  background-color: #139F9F;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.dot_img{
+  margin-top: 10px;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+
+}
 
 @media only screen and (max-width: 767px) {
   .card {
