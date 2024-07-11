@@ -1,0 +1,8 @@
+.accordion .btn-link {
+    text-decoration: none;
+}
+
+/* Optional: Remove focus outline for buttons */
+.accordion .btn-link:focus {
+    outline: none;
+}
