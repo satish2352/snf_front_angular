@@ -16,6 +16,10 @@ export class ServiceService {
     return this.http.get(`${this.carrosalurl}/get`)
   }
 
+  getNewsAndArticlesData() {
+    return this.http.get(`${this.carrosalurl}/snf_in_news_papers/get`)
+  }
+
   // Home Home_2_Cards image API 
   private Home_2_Cardsurl = 'https://snf.backend.socialforumindia.com//home2cards';
   get_Home_2_Cards() {
@@ -161,7 +165,7 @@ export class ServiceService {
 
   // ----------------------------Media/Awards--------------------------------
   //Media/Awards -->  article_on_snf
-  private article_on_snfurl = 'https://snf.backend.socialforumindia.com//article_on_snf';
+  private article_on_snfurl = 'https://snf.backend.socialforumindia.com/article_on_snf';
   getarticle_on_snf() {
     return this.http.get(`${this.article_on_snfurl}/get`)
   }

@@ -318,7 +318,7 @@
 
             .elementor-3023 .elementor-element.elementor-element-3848f6f>.elementor-widget-container {
                 margin: 0px 0px 0px 0px;
-                 background-image: url("../../../assets/img/BANER.jpg");
+                background-image: url("../../../assets/img/BANER.jpg");
                 background-position: center center;
                 background-size: cover;
             }
@@ -514,18 +514,17 @@
                 class="figure-img img-fluid rounded" alt="...">
             <p id="ON_GOING_NAME"><b>Articles</b></p>
         </div>
-<h1>Dhananjay patil</h1>
-          <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of article_on_snf">
-                        <div class="card" id="CARD_IMG_dynamically">
-                            <img class="img-fluid rounded" [src]="'https://snf.backend.socialforumindia.com/uploads/'"
-                                alt="Card image cap">
-                          
-                        </div>
+        <h1>Dhananjay patil</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of article_on_snf">
+                    <div class="card" id="CARD_IMG_dynamically">
+                        <img class="img-fluid rounded" [src]="item.imageUrl" alt="Card image cap">
                     </div>
                 </div>
             </div>
+        </div>
+
         <style id="elementor-post-2805">
             .elementor-2805 .elementor-element.elementor-element-81360bd:not(.elementor-motion-effects-element-type-background),
             .elementor-2805 .elementor-element.elementor-element-81360bd>.elementor-motion-effects-container>.elementor-motion-effects-layer {

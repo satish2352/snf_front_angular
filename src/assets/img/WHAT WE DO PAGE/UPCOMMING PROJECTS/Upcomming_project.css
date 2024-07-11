@@ -47,3 +47,8 @@
 #LIST_ITEM{
     font-size: 15px;
 }
+.donatecontainer{
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background: #FFFFFF;
+
+}

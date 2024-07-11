@@ -12,15 +12,27 @@ export class Home1Component {
   image: File | null = null;
   carrosalData: any;
   newsData:any;
+  newsAndArticlesData:any;
   selectedItem: any = { _id: '', name: '', imageUrl: '' };
   constructor(private service: ServiceService, private router: ActivatedRoute) { }
   ngOnInit(): void {
+    this.getNewsAndArticlesData();
     this.fetchCarrosalData();
     this.fetch2cardsData();
     this.fetch4CardsData();
     this.fetchsupporterData();
     this.fetchNewsData();
 
+  }
+
+
+  getNewsAndArticlesData() {
+    this.service.getNewsAndArticlesData().subscribe(
+      (response) => {
+        console.log(response);
+        this.newsAndArticlesData = response;
+      }
+    );
   }
 
   fetchCarrosalData() {

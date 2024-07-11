@@ -32,3 +32,8 @@
     margin: 0;
     margin-bottom: 20px;
 }
+.visionback{
+    background-image: url('../../../assets/img/vision mission/image 56.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
