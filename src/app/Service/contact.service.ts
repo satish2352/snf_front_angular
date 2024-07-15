@@ -7,11 +7,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactService {
 
-  private contactUrl = 'https://snf.backend.socialforumindia.com//contact'; // Replace with your actual API URL
+  private contactUrl = 'https://snf.backend.socialforumindia.com/contact'; // Replace with your actual API URL
 
   constructor(private http: HttpClient) { }
 
   createFormData(formData: any): Observable<any> {
-    return this.http.post(`${this.contactUrl}/contact-data`, formData);
+    return this.http.post(`${this.contactUrl}/post`, formData);
   }
 }

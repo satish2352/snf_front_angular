@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from 'src/app/Service/service.service';
 
@@ -7,22 +7,28 @@ import { ServiceService } from 'src/app/Service/service.service';
   templateUrl: './on-going-projects-clean-water-projects.component.html',
   styleUrls: ['./on-going-projects-clean-water-projects.component.css']
 })
-export class OnGoingProjectsCleanWaterProjectsComponent {
+export class OnGoingProjectsCleanWaterProjectsComponent implements OnInit {
   name = '';
   image: File | null = null;
-  OnGoingProject_Clean_Water_ProjectData: any;
+  upcomingEvents: any;
   selectedItem: any = { _id: '', name: '', imageUrl: '' };
+  projectDetails: any = { id: 0, name: '', category: '', ProjectTitle: '', Paragraph: '', mainImageUrl: '', images: [] };
 
-  constructor(private service: ServiceService, private router: ActivatedRoute) { }
+  constructor(private service: ServiceService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.fetchData();
   }
+
   fetchData() {
-    this.service.getOnGoingProject_Clean_Water_Project().subscribe(
+    this.service.getupcomingevents().subscribe(
       (response) => {
         console.log(response);
-        this.OnGoingProject_Clean_Water_ProjectData = response;
+        this.upcomingEvents = response;
+       
+      },
+      (error) => {
+        console.error('Error fetching project data', error);
       }
     );
   }

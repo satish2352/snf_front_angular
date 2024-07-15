@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Home2Component } from './Component/home2/home2.component';
 import { Home1Component } from './Component/home1/home1.component';
 import { EventDetailComponent } from './Component/event-detail/event-detail.component';
-import { OnGoingProjectsCleanWaterProjectsComponent } from './Component/on-going-projects-clean-water-projects/on-going-projects-clean-water-projects.component';
+import {OnGoingProjectsCleanWaterProjectsComponent  } from './Component/on-going-projects-clean-water-projects/on-going-projects-clean-water-projects.component';
 import { SNFFinancialReportsComponent } from './Component/snf-financial-reports/snf-financial-reports.component';
 import { ArticleOnSNFComponent } from './Component/article-on-snf/article-on-snf.component';
 import { ContactComponent } from './Component/contact/contact.component';
@@ -78,7 +78,7 @@ const routes: Routes = [
   { path: 'upcomingProject', component: UpcommingProjectsComponent },
 
   // subpages 
-  { path: 'whatwedocleanPro', component: OnGoingProjectsCleanWaterProjectsComponent },
+  // { path: 'whatwedocleanPro', component: GetUpcomingEventsComponent },
   { path: 'whatwedoshahidjawan', component: OnGoingProjectsShahidJawanFundComponent },
   { path: 'whatwedoedufac', component: OnGoingProjectsEducationalFacilitiesComponent },
   { path: 'whatwedohealth', component: OnGoingProjectsHealthMedicalProjectsComponent },

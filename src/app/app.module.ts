@@ -42,7 +42,7 @@ import { SNFTVNewsDocumentryComponent } from './Component/snf-tv-news-documentry
 import { DemoComponent } from './demo/demo.component';
 import { SNFFinancialReportsComponent } from './Component/snf-financial-reports/snf-financial-reports.component';
 import { StatisticsAndStudyComponent } from './Component/statistics-and-study/statistics-and-study.component';
-import { OnGoingProjectsCleanWaterProjectsComponent } from './Component/on-going-projects-clean-water-projects/on-going-projects-clean-water-projects.component';
+import { OnGoingProjectsCleanWaterProjectsComponent } from './Component/on-going-projects-clean-water-projects/on-going-projects-clean-water-projects.component'; // Ensure correct import path
 import { OnGoingProjectsShahidJawanFundComponent } from './Component/on-going-projects-shahid-jawan-fund/on-going-projects-shahid-jawan-fund.component';
 import { OnGoingProjectsEducationalFacilitiesComponent } from './Component/on-going-projects-educational-facilities/on-going-projects-educational-facilities.component';
 import { OnGoingProjectsHealthMedicalProjectsComponent } from './Component/on-going-projects-health-medical-projects/on-going-projects-health-medical-projects.component';

@@ -516,29 +516,35 @@
                 </div>
             </div>
             <div>
+                <div>
                 <div class="container d-flex justify-content-center">
-                    <ul class="nav nav-tabs d-flex" role="tablist">
-                        <button class="btn btn-light">
-                            <li role="presentation" class="active"><a routerLink="/teamsnffounder"
-                                    aria-controls="founder" role="tab" data-toggle="tab" aria-expanded="true">Founder
-                                    &amp; Team</a></li>
+                    <div class="nav nav-tabs d-flex justify-content-center" role="tablist">
+                        <button class="btn btn-light tabbuttton py-2 px-3 mx-lg-3">
+                            <li role="presentation" class="active "><a routerLink="/teamsnffounder"
+                                    aria-controls="founder" role="tab" data-toggle="tab" aria-expanded="true"
+                                    class=" text-white ">Founder
+                                    Team</a></li>
                         </button>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="btn btn-light">
+
+                        <button class="btn btn-light tabbuttton py-2 px-3 mx-lg-3">
                             <li role="presentation" class=""><a routerLink="/teamsnfmentores" aria-controls="mentor"
-                                    role="tab" data-toggle="tab" aria-expanded="false">Mentors</a></li>
-                        </button> &nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="btn btn-light">
-                            <li role="presentation" class=""><a routerLink="/teamsnfnripart" aria-controls="nri"
-                                    role="tab" data-toggle="tab" aria-expanded="false">NRI Participants</a></li>
-                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="btn btn-light">
-                            <li role="presentation" class=""><a routerLink="/teamsnfstatepart" aria-controls="state"
-                                    role="tab" data-toggle="tab" aria-expanded="false">State Participants</a></li>
+                                    role="tab" data-toggle="tab" aria-expanded="false" class=" text-white ">Mentors</a>
+                            </li>
                         </button>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                    </ul>
+                        <button class="btn btn-light tabbuttton py-2 px-3 mx-lg-3">
+                            <li role="presentation" class=""><a routerLink="/teamsnfnripart" aria-controls="nri"
+                                    role="tab" data-toggle="tab" aria-expanded="false" class=" text-white ">NRI
+                                    Participants</a></li>
+                        </button>
+                        <button class="btn btn-light tabbuttton py-2 px-3 mx-lg-3">
+                            <li role="presentation" class=""><a routerLink="/teamsnfstatepart" aria-controls="state"
+                                    role="tab" data-toggle="tab" aria-expanded="false" class=" text-white ">State
+                                    Participants</a></li>
+                        </button>
+
+                    </div>
                 </div>
+            </div>
             </div>
 
 
@@ -547,16 +553,24 @@
                     <p class="sub_title thrid_font">NRI Participants</p>
                 </div>
             </div>
-
-            <div class="container ">
+        
+              
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-12" *ngFor="let item of NRI_ParticipantsData">
-                        <div class="card mb-3">
-                            <img style="height: 200px; width: auto;" class="ImageTeam rounded img-fluid"
-                                [src]="'https://snf.backend.socialforumindia.com/uploads/'" alt="Card image cap">
-                            <div class="card-body">
-                                <p style="line-height: 25px; font-size: 15px;" class="card-text text-center m-0">{{
-                                    item.name }}</p>
+                    <div class=" col-lg-10 d-flex justify-content-center">
+                        <div class=" row">
+                            <div class="col-lg-3 col-md-3  col-6 p-2 p-lg-0  "
+                                
+                                *ngFor="let item of NRI_ParticipantsData">
+                                <div class="card my-3 mx-lg-2   "style="box-shadow: 8px 10px 10px 0px #00000040;">
+                                    <img class="ImageTeam rounded img-fluid" [src]="item.imageUrl" alt="Card image cap">
+                                    <div class="card-body" style="background: #DF5225;
+                            ">
+                                        <p style="line-height: 25px; font-size: 15px;"
+                                            class="card-text text-center text-white m-0">{{
+                                            item.name }}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

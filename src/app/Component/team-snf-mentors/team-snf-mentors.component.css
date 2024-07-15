@@ -19,4 +19,12 @@
 .card:hover .card-body {
     transform: scale(1.1);
     color: orange;
+}.tabbuttton{
+    background: #139F9F;
+    color: white !important;
+    font-weight: 600;
+    border-radius: 30px;
+}
+.nav-tabs {
+    border-bottom: 0px solid #ffffff  !important; 
 }
