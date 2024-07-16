@@ -8,11 +8,8 @@ import { ServiceService } from 'src/app/Service/service.service';
   styleUrls: ['./on-going-projects-clean-water-projects.component.css']
 })
 export class OnGoingProjectsCleanWaterProjectsComponent implements OnInit {
-  name = '';
-  image: File | null = null;
   upcomingEvents: any;
-  selectedItem: any = { _id: '', name: '', imageUrl: '' };
-  projectDetails: any = { id: 0, name: '', category: '', ProjectTitle: '', Paragraph: '', mainImageUrl: '', images: [] };
+  activeTab: number = 1; // Initialize activeTab with a default value
 
   constructor(private service: ServiceService, private route: ActivatedRoute) { }
 
@@ -25,7 +22,9 @@ export class OnGoingProjectsCleanWaterProjectsComponent implements OnInit {
       (response) => {
         console.log(response);
         this.upcomingEvents = response;
-       
+        if (this.upcomingEvents.length > 0) {
+          this.activeTab = this.upcomingEvents[0].id; // Set activeTab to the ID of the first event
+        }
       },
       (error) => {
         console.error('Error fetching project data', error);
@@ -33,7 +32,13 @@ export class OnGoingProjectsCleanWaterProjectsComponent implements OnInit {
     );
   }
 
-  onFileChange(event: any): void {
-    this.image = event.target.files[0];
+  // Method to handle tab click and set activeTab
+  setActiveTab(tabId: number): void {
+    this.activeTab = tabId;
+  }
+
+  // Optional method to check if a tab is active
+  isTabActive(tabId: number): boolean {
+    return this.activeTab === tabId;
   }
 }

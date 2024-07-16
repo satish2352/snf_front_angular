@@ -512,77 +512,64 @@
             style="background-color: #E9FFFF">
 
         </div>
-        <!-- on-going-projects-clean-water-projects.component.html -->
 
         <div class="container">
-            <div class="container">
-                <div>
-                    <div class="container d-flex justify-content-center">
-                        <ul class="nav nav-tabs d-flex" role="tablist">
-                            <button class="btn btn-light" *ngFor="let event of upcomingEvents"
-                                style="border-radius: 50px; background-color: #139F9F; border: none; ">
-                                <li role="presentation" class="active"><a class="nav-link" data-toggle="tab"
-                                        [attr.href]="'#tab-' + event.id" style="color: white;">Clean
-                                        {{ event.category }}</a></li>
-                            </button>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-content">
-                <div *ngFor="let event of upcomingEvents" class="tab-pane fade" [class.show]="event.id === 1"
-                    [id]="'tab-' + event.id" role="tabpanel">
-                    <div class="project-details">
-                        <h2>{{ event.ProjectTitle }}</h2>
-                        <p>{{ event.Paragraph }}</p>
-                        <img [src]="event.mainImageUrl" alt="Main Image" class="img-fluid mb-3">
-                        <div *ngFor="let image of event.images" class="additional-images">
-                            <img [src]="image.imageUrl" alt="{{ image.imageTitle }}" class="img-fluid mr-2">
-                            <p>{{ image.imageTitle }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div>
+      <div class="container d-flex justify-content-center">
+        <div class="nav nav-tabs d-flex justify-content-center" role="tablist">
+          <li class="nav-item mx-lg-4 my-lg-2 my-1" *ngFor="let event of upcomingEvents">
+            <button class="nav-link btn btn-light" [class.active]="isTabActive(event.id)"
+              (click)="setActiveTab(event.id)"
+              style="border-radius: 50px; background-color: #139F9F; border: none; color: white;">
+              {{ event.category }}
+            </button>
+          </li>
         </div>
-
-        <div *ngFor="let event of upcomingEvents">
-            <div class="HEAD_START" style="background-color: #E9FFFF;">
-                <div class="container">
-                    <div class="card" style="border-radius: 50px;">
-                        <div class="card-header"
-                            style="background-color: #139F9F; border-radius: 50px 50px 0px 0px; color: white;">
-                            {{ event.ProjectTitle }}
-                        </div>
-                        <div class="card-body" style="background-color: white; border-radius: 0px 0px 50px 50px">
-                            <img [src]="event.mainImageUrl" class="figure-img img-fluid rounded" alt="Main Image"
-                                width="400px">
-                            <p class="card-text" style="text-align: justify;">
-                                {{ event.Paragraph }}
-                            </p>
-                            <div class="text-end">
-                                <button type="button"
-                                    style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;">
-                                    <b>Donate</b>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let event of upcomingEvents">
+    <div class="HEAD_START" *ngIf="isTabActive(event.id)" style="background-color: #E9FFFF;">
+      <div class="container">
+        <div class="card" style="border-radius: 50px;">
+          <div class="card-header"
+            style="background-color: #139F9F; border-radius: 50px 50px 0px 0px; color: white;">
+            {{ event.ProjectTitle }}
+          </div>
+          <div class="card-body" style="background-color: white; border-radius: 0px 0px 50px 50px">
+            <img [src]="event.mainImageUrl" class="figure-img img-fluid rounded" alt="Main Image" width="400px">
+            <p class="card-text" style="text-align: justify;">
+              {{ event.Paragraph }}
+            </p>
+            <div class="text-end">
+              <button type="button"
+                style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;">
+                <b>Donate</b>
+              </button>
             </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let image of event.images">
-                        <div class="card" id="CARD_IMG_dynamically">
-                            <img class="img-fluid rounded" [src]="image.imageUrl" alt="Card image cap">
-                            <p class="card-body card-text text-center" id="IMG_NAME_dynamically">{{ image.imageTitle }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let image of event.images">
+              <div class="card" id="CARD_IMG_dynamically">
+                <img class="img-fluid rounded" [src]="image.imageUrl" alt="Card image cap">
+                <p class="card-body card-text text-center" id="IMG_NAME_dynamically">{{ image.imageTitle }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
 
         <style id="elementor-post-2805">
