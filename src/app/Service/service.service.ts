@@ -10,14 +10,14 @@ export class ServiceService {
   constructor(private http: HttpClient) { }
   // ----------------------------Home--------------------------------
   // Home carrosal image API 
-  private carrosalurl = 'https://snf.backend.socialforumindia.com//carrosal';
+  private carrosalurl = 'https://snf.backend.socialforumindia.com/carrosal';
 
   getCarrosalData() {
     return this.http.get(`${this.carrosalurl}/get`)
   }
 
   getNewsAndArticlesData() {
-    return this.http.get(`${this.carrosalurl}/snf_in_news_papers/get`)
+    return this.http.get(`https://snf.backend.socialforumindia.com/homemedia/get`)
   }
 
   // Home Home_2_Cards image API 
@@ -28,7 +28,7 @@ export class ServiceService {
 
 
   // Home Home_4_Cards image API 
-  private Home_4_Cardsurl = 'https://snf.backend.socialforumindia.com//home4cards';
+  private Home_4_Cardsurl = 'https://snf.backend.socialforumindia.com/home4cards';
 
   add_Home_4_Cards(formdata: any) {
     return this.http.post(`${this.Home_4_Cardsurl}/post`, formdata);
@@ -48,7 +48,7 @@ export class ServiceService {
   }
 
   //Home media 
-  private mediaurl ='https://snf.backend.socialforumindia.com//homemedia';
+  private mediaurl = 'https://snf.backend.socialforumindia.com//homemedia';
 
 
   postHome_Media(formdata: any) {
@@ -65,7 +65,7 @@ export class ServiceService {
   }
 
   // Home supporter image API 
-  private supporterurl = 'https://snf.backend.socialforumindia.com//supporter';
+  private supporterurl = 'https://snf.backend.socialforumindia.com/supporter/';
 
   addSupporter(formdata: any) {
     return this.http.post(`${this.supporterurl}/post`, formdata);
@@ -89,28 +89,28 @@ export class ServiceService {
 
 
   //Who we are --> Team SNF FounderParticipant
-  private founderparticipateurl = 'https://snf.backend.socialforumindia.com//founderparticipates';
+  private founderparticipateurl = 'https://snf.backend.socialforumindia.com/founderparticipates';
   getFounderParticipants() {
     return this.http.get(`${this.founderparticipateurl}/get`)
   }
 
 
   //Who we are --> Team SNF Mentors
-  private Mentorsurl = 'https://snf.backend.socialforumindia.com//mentors';
+  private Mentorsurl = 'https://snf.backend.socialforumindia.com/mentors';
   getMentors() {
     return this.http.get(`${this.Mentorsurl}/get`)
   }
 
 
   // Who we are --> Team SNF NRI Participants
-  private NRIParticipantsurl = 'https://snf.backend.socialforumindia.com//NRI_Participants';
+  private NRIParticipantsurl = 'https://snf.backend.socialforumindia.com/NRI_Participants';
   getNRI_Participants() {
     return this.http.get(`${this.NRIParticipantsurl}/get`)
   }
 
 
   //Who we are --> Team SNF State Participants
-  private StateParticipantsurl = 'https://snf.backend.socialforumindia.com//State_Participants';
+  private StateParticipantsurl = 'https://snf.backend.socialforumindia.com/stateparticipant';
   getState_Participants() {
     return this.http.get(`${this.StateParticipantsurl}/get`)
   }
@@ -170,6 +170,7 @@ export class ServiceService {
     return this.http.get(`${this.article_on_snfurl}/get`)
   }
 
+
   //  Media/Awards -->  snf_in_news_papers
   private snf_in_news_papersurl = 'https://snf.backend.socialforumindia.com//snf_in_news_papers';
   getsnf_in_news_papers() {
@@ -181,6 +182,9 @@ export class ServiceService {
   getawards_recognation() {
     return this.http.get(`${this.awards_recognationurl}/get`)
   }
-
+  private upcomingevents = 'https://snf.backend.socialforumindia.com/upcomingeventsRoute';
+  getupcomingevents() {
+    return this.http.get(`${this.upcomingevents}/get`)
+  }
 
 }
