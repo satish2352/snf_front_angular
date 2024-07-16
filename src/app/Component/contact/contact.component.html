@@ -10,6 +10,7 @@
     <link rel="pingback" href="../xmlrpc.php">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
     <!-- <link media="all" href="assets/wp-content/cache/autoptimize/css/autoptimize_94c2ca929850cedf69fba903b6879189.css"
         rel="stylesheet"> -->
     <!-- <link media="only screen and (max-width: 768px)"
@@ -81,6 +82,8 @@
     <link rel="icon" href="assets/wp-content/uploads/2021/02/cropped-favicon-192x192.jpeg" sizes="192x192" />
     <link rel="apple-touch-icon" href="assets/wp-content/uploads/2021/02/cropped-favicon-180x180.jpeg" />
     <meta name="msapplication-TileImage" content="assets/wp-content/uploads/2021/02/cropped-favicon-270x270.jpeg" />
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body
@@ -526,7 +529,7 @@
                     <div class="col-lg-8 col-md-8 col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <h2>CONTACT US </h2>
+                                <h2>CONTACT US</h2>
                                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                                     <div class="row">
                                         <div class="col-xl-6">
@@ -565,7 +568,7 @@
                                         <textarea id="message" formControlName="message"
                                             class="form-control"></textarea>
                                     </div>
-
+                                    
                                     <button type="submit" [disabled]="form.invalid" class="px-5 mt-3  btn-lg"
                                         style="border-radius: 30px; background-color: #DF5225; color: white; border: none;">Submit</button>
                                 </form>
@@ -586,6 +589,7 @@
                                         style="font-size: 15px; color: black; text-align: justify;">
                                         3rd Floor, Vitthal Charani Sankul, Off Big Bazaar, College Road, Nashik,
                                         Maharashtra- 422005 .
+                                        
                                     </div>
                                     <br>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
