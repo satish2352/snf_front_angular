@@ -516,74 +516,16 @@
             <p id="ON_GOING_NAME"><b>Awards & Recognition dd</b></p> -->
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award1.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award 2.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award 3.png" class="img-fluid" alt="...">
-                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12"  *ngFor="let item of awards_recognation">
+                        <img [src]="item.imageUrl" class="img-fluid" alt="...">                    </div>
+                
                 </div>
             </div>
-            
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award 4.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award 5.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award6.png" class="img-fluid" alt="...">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award7.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award8.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award 9.png" class="img-fluid" alt="...">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award 10.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award 11.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/Awards & Recognition/award 12.png" class="img-fluid" alt="...">
-                    </div>
-                </div>
-            </div>
+           
 
 
 
-            <!-- /* Slide Text  */ -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of awards_recognation">
-                        <div class="card" id="CARD_IMG_dynamically">
-                            <img class="img-fluid rounded" [src]="'https://snf.backend.socialforumindia.com/uploads/'"
-                                alt="Card image cap">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+          
         </div>
         <style id="elementor-post-2805">
             .elementor-2805 .elementor-element.elementor-element-81360bd:not(.elementor-motion-effects-element-type-background),

@@ -506,39 +506,18 @@
             </section>
         </div>
 
-        <div class="elementor-element elementor-element-f6f5a8b elementor-widget elementor-widget-ova_heading"
-            data-id="f6f5a8b" data-element_type="widget" data-widget_type="ova_heading.default">
-        </div>
+       
+
         <div class="HEAD_START" style="background-color: #D8FFFF; margin-top: -20px;">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/ArticleOnSNF/article_firstimg.png" class="img-fluid" alt="...">
+                    <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let item of article_on_snf">
+                        <img [src]="item.imageUrl" class="img-fluid" alt="...">
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/ArticleOnSNF/article_secondimg.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/ArticleOnSNF/article_thirdimg.png" class="img-fluid" alt="...">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/ArticleOnSNF/article_fourimg.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/ArticleOnSNF/article_fiveimg.png" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="../../../assets/img/ArticleOnSNF/article_siximg.png" class="img-fluid" alt="...">
-                    </div>
+                    
                 </div>
             </div>
         </div>
-
         <style id="elementor-post-2805">
             .elementor-2805 .elementor-element.elementor-element-81360bd:not(.elementor-motion-effects-element-type-background),
             .elementor-2805 .elementor-element.elementor-element-81360bd>.elementor-motion-effects-container>.elementor-motion-effects-layer {

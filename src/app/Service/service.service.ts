@@ -172,13 +172,13 @@ export class ServiceService {
 
 
   //  Media/Awards -->  snf_in_news_papers
-  private snf_in_news_papersurl = 'https://snf.backend.socialforumindia.com//snf_in_news_papers';
+  private snf_in_news_papersurl = 'https://snf.backend.socialforumindia.com/snf_in_news_papers';
   getsnf_in_news_papers() {
     return this.http.get(`${this.snf_in_news_papersurl}/get`)
   }
 
   //  Media/Awards -->  awards_recognation
-  private awards_recognationurl = 'https://snf.backend.socialforumindia.com//awards_recognation';
+  private awards_recognationurl = 'https://snf.backend.socialforumindia.com/awards_recognation';
   getawards_recognation() {
     return this.http.get(`${this.awards_recognationurl}/get`)
   }
