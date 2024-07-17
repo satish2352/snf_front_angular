@@ -515,40 +515,13 @@
                 class="figure-img img-fluid rounded" alt="..."> -->
             <p id="ON_GOING_NAME"><b>MEDIA</b></p>
 
-            <div class="container">
-                <div class="row">
-                  <div class="col-lg-4 col-sm-4 col-sm-12">
-                    <img src="../../../assets/img/ArticleOnSNF/article img1.png" class="img-fluid" alt="...">
-                  </div>
-                  <div class="col-lg-4 col-sm-4 col-sm-12">
-                    <img src="../../../assets/img/ArticleOnSNF/article img2.png" class="img-fluid" alt="...">
-                  </div>
-                  <div class="col-lg-4 col-sm-4 col-sm-12">
-                    <img src="../../../assets/img/ArticleOnSNF/article img 3.png" class="img-fluid" alt="...">
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-4 col-sm-4 col-sm-12">
-                    <img src="../../../assets/img/ArticleOnSNF/article img4.png" class="img-fluid" alt="...">
-                  </div>
-                  <div class="col-lg-4 col-sm-4 col-sm-12">
-                    <img src="../../../assets/img/ArticleOnSNF/article img 5.png" class="img-fluid" alt="...">
-                  </div>
-                  <div class="col-lg-4 col-sm-4 col-sm-12">
-                    <img src="../../../assets/img/ArticleOnSNF/article img 6.png" class="img-fluid" alt="...">
-                  </div>
-                </div>
-              </div>
-
+         
 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of snf_in_news_papers">
                         <div class="card" id="CARD_IMG_dynamically">
-                            <img class="img-fluid rounded" [src]="'https://snf.backend.socialforumindia.com/uploads/'"
-                                alt="Card image cap">
+                            <img [src]="item.imageUrl" class="img-fluid" alt="...">
                            
                         </div>
                     </div>
