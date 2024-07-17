@@ -543,10 +543,10 @@
               {{ event.Paragraph }}
             </p>
             <div class="text-end">
-              <button type="button"
+              <a href="/DonateNow"><button type="button"
                 style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;">
                 <b>Donate</b>
-              </button>
+              </button></a>
             </div>
           </div>
         </div>
@@ -555,7 +555,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let image of event.images">
               <div class="card" id="CARD_IMG_dynamically">
                 <img class="img-fluid rounded" [src]="image.imageUrl" alt="Card image cap">
-                <p class="card-body card-text text-center" id="IMG_NAME_dynamically">{{ image.imageTitle }}
+                <p class="card-body card-text text-center text-white" id="IMG_NAME_dynamically">{{ image.imageTitle }}
                 </p>
               </div>
             </div>

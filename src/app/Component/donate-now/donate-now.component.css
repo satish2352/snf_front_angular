@@ -51,8 +51,11 @@
 .donation-details p {
     margin-bottom: 0px; 
 }
-
-
+ @media only screen and (max-width: 600px) {
+  #data_card{
+    text-align: center;
+  }
+  }
 
 .donate-header {
   display: flex;
