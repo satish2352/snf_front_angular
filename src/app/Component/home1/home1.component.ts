@@ -12,6 +12,7 @@ export class Home1Component {
   image: File | null = null;
   carrosalData: any;
   newsData:any;
+  upcomingevents:any;
   newsAndArticlesData:any;
   selectedItem: any = { _id: '', name: '', imageUrl: '' };
   constructor(private service: ServiceService, private router: ActivatedRoute) { }
@@ -22,10 +23,17 @@ export class Home1Component {
     this.fetch4CardsData();
     this.fetchsupporterData();
     this.fetchNewsData();
-
+    this.fetcheventdata();
   }
 
-
+  fetcheventdata(){
+    this.service.getNewsAndArticlesData().subscribe(
+      (response) => {
+        console.log(response);
+        this.upcomingevents = response;
+      }
+    );
+  }
   getNewsAndArticlesData() {
     this.service.getNewsAndArticlesData().subscribe(
       (response) => {
