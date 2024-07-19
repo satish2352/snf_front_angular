@@ -15,18 +15,22 @@
     height: 75px;
 
 }
-.mediaimg{
+
+.mediaimg {
     width: 300px;
     height: 300px;
 }
-.Hometitle{
+
+.Hometitle {
     font-family: Shadows Into Light;
     color: #ff6d12;
 }
-.homepagenames{
+
+.homepagenames {
     font-family: Abril Fatface;
     font-size: 45px;
 }
+
 .dot {
     height: 200px;
     width: 200px;
@@ -34,24 +38,33 @@
     border-radius: 50%;
     border-color: orange;
     display: inline-block;
-  }
+}
 
-  #ourimg{
-    height: 300px;
-   
-  }
-#newsarticle{
+#ourimg {
+    height: 230px;
+    width: 400px;
+    padding: 10px;
+
+}
+
+#newsarticle {
     margin-top: 360px;
 }
-.newsarticle1{
+
+.newsarticle1 {
     text-align: center;
     position: relative;
 }
+
 @media only screen and (max-width: 600px) {
-    #newsarticle{
-        margin-top: 5px;
+    #newsarticle {
+        margin-top: -100px;
     }
-  }
+    .oursection{
+        margin-top: 600px;
+    }
+}
+
 @media screen and (min-width: 480px) {
     .ok {
         height: 700px;
@@ -137,6 +150,60 @@
     left: 7px;
     top: 0px;
 } */
+@media only screen and (max-width: 600px) {
+    .ourlist {
+        text-align: justify;
+        margin-left: -60px;
+        margin-top: -60px;
+    }
+  
+
+    .donatebtn {
+        margin-top: 30px;
+    }
+
+    .our_ongoing {
+        margin-top: -60px;
+    }
+
+    .card_home {
+        margin-top: 30px;
+    }
+
+    .home_card_btn {
+        width: 300px;
+        color: azure;
+    }
+
+    .newsarticle_home {
+        margin-top: 70px;
+    }
+
+    .Bringing_card {
+        margin-top: -10px;
+    }
+
+    #reviewname {
+        margin-top: 230px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .readmorebtn {
+        justify-content: center;
+        padding-left: 10px;
+        margin-right: 100px;
+        margin-top: -30px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    #socialnetworking {
+        margin-top: -80px;
+    }
+}
+
 .truncate {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -233,7 +300,7 @@
     padding: 0;
     margin: 0;
     color: orangered;
-    /* font-weight: bolder; */
+ 
     font-size: 20px;
     position: absolute;
     bottom: 0;
@@ -250,11 +317,84 @@
 }
 
 
+ .Our_Suppportersimgs {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+ .scroll-container {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    flex-wrap: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/*
+.scroll-container div {
+    display: inline-block;
+    margin-right: 10px;
+   
+}
+*/
+.scroll-container img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+} 
+
+@media (max-width: 1200px) {
+    .scroll-container img {
+        max-width: 600px;
+       
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-container img {
+        max-width: 550px;
+        
+    }
+    .ourhome{
+        margin-top: 100px
+    }
+}
 
 
+@media (max-width: 480px) {
+    .scroll-container img {
+        max-width: 230px;
+        
+        
+    }
+}
 
 
+#ourimg {
+    transition: none; 
+}
 
+#ourimg:hover {
+    transform: none; 
+    filter: none; 
+    opacity: 1; 
+
+} 
+
+
+/* @media only screen and (max-width: 600px) {
+    .scroll-container {
+        padding-bottom: 100px;
+       
+    }
+} */
 
 
 
@@ -282,49 +422,59 @@
 .card img:hover {
     transform: scale(1.08);
 }
-.cpsuleback{
+
+.cpsuleback {
     box-shadow: 6px 4px 25px 0px #00000040;
     background: #FFFFFF;
     position: relative;
     bottom: 100px;
 }
-.capsultiitle{
+
+.capsultiitle {
     font-size: 30px;
     font-weight: 700;
     /* letter-spacing: 5px; */
 }
-.testomonialimg{
-     border-radius: 50%;
+
+.testomonialimg {
+    border-radius: 50%;
 }
-.capsulsubtiitle{
+
+.capsulsubtiitle {
     font-size: 19px;
     line-height: 15px;
     color: black;
 }
-.cpsulebackcolor{
+
+.cpsulebackcolor {
     background: #D9FEFF;
     margin-top: 140px;
 }
-.smileinfo{
+
+.smileinfo {
     background: #FF6D12;
     box-shadow: 8px 4px 15px 0px hsla(0, 0%, 0%, 0.251);
     font-size: 14px;
-    color:  white;
+    color: white;
     position: relative;
     bottom: 50px;
 }
-.snileback{
+
+.snileback {
     background: #139F9F;
-    margin-bottom: 140px;
+    margin-bottom: 50px;
+    height: 648px;
 }
-.smiletiile{
+
+.smiletiile {
     color: white;
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
     font-size: 45px;
     padding-top: 50px;
 }
-.smilerow{
+
+.smilerow {
     position: relative;
-    top: 100px;
+    top: 50px;
 }

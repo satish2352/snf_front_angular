@@ -30,3 +30,9 @@
     background-color: darkorange; /* Change hover color if needed */
   }
   
+
+  @media only screen and (max-width: 600px) {
+    #contact_us{
+      display: inline;
+    }
+    }

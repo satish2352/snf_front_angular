@@ -11,13 +11,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 
 <div data-elementor-type="wp-page" data-elementor-id="201" class="elementor elementor-201">
     <app-header></app-header>
 
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner" id="carsoleimgs">
             <div *ngFor="let item of carrosalData; let i = index" [class.active]="i === 0" class="carousel-item">
                 <img [src]="item.imageUrl" class="d-block w-100" alt="...">
             </div>
@@ -33,7 +36,7 @@
         </a>
     </div>
 
-    <div class="text-center">
+    <div class="text-center" id="socialnetworking">
         <div class="container" style="padding-top: 100px;">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
@@ -48,9 +51,12 @@
                             initiative, hundreds of projects are undertaken and implemented.</p>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <button type="button"
-                            style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;"><b>Read
-                                More</b></button>
+                        <div class="readmorebtn">
+                            <a routerLink="/whoweare"><button type="button"
+                                style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;"><b>Read
+                                    More</b></button></a>
+                        </div>
+
                     </div>
                     <br>
                 </div>
@@ -62,9 +68,9 @@
         </div>
     </div>
     <div class="text-center">
-        <div class="container" style="padding-top: 100px;">
+        <div class="container">
             <div class="ova-heading">
-                <h4 class="Hometitle text-center">Happy People</h4>
+                <h4 class="Hometitle text-center mt-3">Happy People</h4>
                 <h2 class="homepagenames text-center">Our Suppporters</h2>
             </div>
             <!-- <div class="d-flex justify-content-end">
@@ -74,16 +80,22 @@
             </div> -->
             <br>
         </div>
-        <div class="card" style="background-color: #DFBB41; ">
-            <div class="container">
+        <div class="card Our_Suppportersimgs" style="background-color: #DFBB41;">
+            <div class="scroll-container">
+                <div *ngFor="let item of support_data; let i = index" [class.active]="i === 0">
+                    <img [src]="item.imageUrl" class="img-fluid" alt="..." id="ourimg">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let item of support_data; let i = index"
                         [class.active]="i === 0">
                         <img [src]="item.imageUrl" class="img-fluid" alt="..." id="ourimg">
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
 
     </div>
     <!-- 2 Cards  -->
@@ -94,17 +106,8 @@
             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d086ebf asting_carosel_right"
                 data-id="d086ebf" data-element_type="column">
                 <div class="elementor-widget-wrap elementor-element-populated">
-
-
-
                     <div class="elementor-widget-container">
-
-
-
-
                     </div>
-
-
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12" *ngFor="let item of Home_2_Cards_Data">
@@ -134,208 +137,220 @@
 
 
     <!-- SOCIAL NETWORKING FORUM  -->
-    <section style="margin-top: -50px;"
-        class="elementor-section elementor-top-section elementor-element elementor-element-ac8e6d1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="ac8e6d1" data-element_type="section"
-        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-        <div class="elementor-background-overlay"></div>
-        <div class="elementor-container elementor-column-gap-default">
-            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-858254f"
-                data-id="858254f" data-element_type="column">
-                <div class="elementor-widget-wrap elementor-element-populated">
-                    <div class="elementor-element elementor-element-282e947 elementor-widget elementor-widget-ova_heading"
-                        data-id="282e947" data-element_type="widget" data-widget_type="ova_heading.default">
-                        <div class="elementor-widget-container">
-                            <div class="ova-heading">
-                                <h4 class="sub_title thrid_font">Helping Today</h4>
-                                <h2 class="title second_font">SOCIAL NETWORKING FORUMs</h2>
+    <div class="ourhome">
+        <section style="margin-top: -90px;"
+            class="elementor-section elementor-top-section elementor-element elementor-element-ac8e6d1 elementor-section-boxed elementor-section-height-default elementor-section-height-default "
+            data-id="ac8e6d1" data-element_type="section"
+            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-background-overlay"></div>
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-858254f"
+                    data-id="858254f" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-282e947 elementor-widget elementor-widget-ova_heading"
+                            data-id="282e947" data-element_type="widget" data-widget_type="ova_heading.default">
+                            <div class="elementor-widget-container">
+                                <div class="ova-heading">
+                                    <h4 class="sub_title thrid_font">Helping Today</h4>
+                                    <h2 class="title second_font">SOCIAL NETWORKING FORUM</h2>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="elementor-element elementor-element-d8c566f elementor-widget elementor-widget-ova_icon_box"
-                        data-id="d8c566f" data-element_type="widget" data-widget_type="ova_icon_box.default">
-                        <div class="elementor-widget-container">
-                            <div class="ova-icon-box">
-                                <div class="img-animation"> <img decoding="async" src="../../../assets/img/arrows.png"
-                                        alt=""></div>
-                                <div class="icon-box-content-video video-btn" data-toggle="modal"
-                                    src="../../../assets/img/SNF new logo 2020.jpeg" data-target="#videoModal"><img
-                                        src="../../../assets/img/SNF new logo 2020.jpeg" alt=""></div>
-                                <br><br>
-                                <br><br>
-                                <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-body"> <button type="button" class="close"
-                                                    data-dismiss="modal" aria-label="Close"> <span
-                                                        aria-hidden="true">&times;</span> </button>
-                                                <div class="embed-responsive embed-responsive-16by9"> <iframe
-                                                        class="embed-responsive-item" id="video"
-                                                        allow="autoplay"></iframe></div>
+                        <div class="elementor-element elementor-element-d8c566f elementor-widget elementor-widget-ova_icon_box"
+                            data-id="d8c566f" data-element_type="widget" data-widget_type="ova_icon_box.default">
+                            <div class="elementor-widget-container">
+                                <div class="ova-icon-box">
+                                    <div class="img-animation"> <img decoding="async"
+                                            src="../../../assets/img/arrows.png" alt=""></div>
+                                    <div class="icon-box-content-video video-btn" data-toggle="modal"
+                                        src="../../../assets/img/SNF new logo 2020.jpeg" data-target="#videoModal"><img
+                                            src="../../../assets/img/SNF new logo 2020.jpeg" alt=""></div>
+                                    <br><br>
+                                    <br><br>
+                                    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body"> <button type="button" class="close"
+                                                        data-dismiss="modal" aria-label="Close"> <span
+                                                            aria-hidden="true">&times;</span> </button>
+                                                    <div class="embed-responsive embed-responsive-16by9"> <iframe
+                                                            class="embed-responsive-item" id="video"
+                                                            allow="autoplay"></iframe></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-
                 </div>
-            </div>
-            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7755ce8"
-                data-id="7755ce8" data-element_type="column">
-                <div class="elementor-widget-wrap elementor-element-populated">
-                    <div class="elementor-element elementor-element-3903e2e elementor-widget elementor-widget-ova_list_icon_transform"
-                        data-id="3903e2e" data-element_type="widget" data-widget_type="ova_list_icon_transform.default">
-                        <div class="elementor-widget-container">
-                            <div class="ova-list-icon-transform">
-                                <ul>
-
-
-                                    <li>
-                                        <div class="list-text">
-                                            <h4 class="title">OUR </h4>
-                                            <p class="text">Our goal is to supply clean water to people who can
-                                                not access to safe water.</p>
-                                            <!-- <div class="elementor-widget-container"
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7755ce8"
+                    data-id="7755ce8" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-3903e2e elementor-widget elementor-widget-ova_list_icon_transform"
+                            data-id="3903e2e" data-element_type="widget"
+                            data-widget_type="ova_list_icon_transform.default">
+                            <div class="elementor-widget-container">
+                                <div class="ova-list-icon-transform ">
+                                    <ul>
+                                        <li class="ourlist">
+                                            <div class="list-text">
+                                                <h4 class="title">OUR </h4>
+                                                <p class="text">Our goal is to supply clean water to people who can
+                                                    not access to safe water.</p>
+                                                <!-- <div class="elementor-widget-container"
                                                 style="padding-top: 20px; padding-bottom: -5px;">
                                                 <div class="ova-btn"> <a routerLink="/DonateNow" class="btn"> Donate Now
                                                     </a></div>
                                             </div> -->
-                                            <a href="/DonateNow"><button type="button" class="btn btn-primary" style="background-color: #ff6d12; color: white; border: none; border-radius: 50px; padding: 15px;"><b>Donate Now</b></button></a>
-                                        </div>
-
-                                    </li>
-
-                                </ul>
+                                                <a href="/DonateNow"><button type="button"
+                                                        class="btn btn-primary donatebtn"
+                                                        style="background-color: #ff6d12; color: white; border: none; border-radius: 50px; padding: 15px;"><b>Donate
+                                                            Now</b></button></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
-    </section>
+        </section>
 
 
 
-    <section class=" position-relative pb-lg-5">
-        <div class=" container">
-            <div class=" row">
-                <section style="margin-top: 100px;">
-                    <h1 style="font-family: Abril Fatface;" class="text-center">Our On Going Project</h1>
-                    <div class=" row d-flex justify-content-center smilerow">
+        <section class=" position-relative pb-lg-5">
+            <div class=" container">
+                <div class=" row">
+                    <section style="margin-top: 100px;">
+                        <h1 style="font-family: Abril Fatface;" class="text-center our_ongoing">Our On Going Project
+                        </h1>
+                        <div class=" row d-flex justify-content-center smilerow">
 
-                        <div class="col-lg-3 col-md-2 col-sm-12">
-                            <div class="card" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
+                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;">
+                                <div class="card card_home" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
 ">
-                                <div class="card-body text-center">
-                                    <img src="../../../assets/img/Ellipse 14.png">
-                                    <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
-                                    <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative Of
-                                        Social
-                                        Networking Forum ...a long-term, cost effective solution for water scarcity in
-                                        difficult
-                                        terrains..</p>
+                                    <div class="card-body text-center">
+                                        <img src="../../../assets/img/Ellipse 14.png">
+                                        <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
+                                        <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative
+                                            Of
+                                            Social
+                                            Networking Forum ...a long-term, cost effective solution for water scarcity
+                                            in
+                                            difficult
+                                            terrains..</p>
+                                    </div>
+                                </div>
+                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center" id="homecard_data">
+                                    <a routerLink="/whatwedo" class="text-white"><b>Clean Water Project</b></a>
                                 </div>
                             </div>
-                            <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
-                                <b>Clean Water Project</b>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-12">
-                            <div class="card" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
+                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;">
+                                <div class="card" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
 ">
-                                <div class="card-body text-center">
-                                    <img src="../../../assets/img/Ellipse 14 (1).png">
-                                    <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
-                                    <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative Of
-                                        Social
-                                        Networking Forum ...a long-term, cost effective solution for water scarcity in
-                                        difficult
-                                        terrains... </p>
+                                    <div class="card-body text-center">
+                                        <img src="../../../assets/img/Ellipse 14 (1).png">
+                                        <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
+                                        <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative
+                                            Of
+                                            Social
+                                            Networking Forum ...a long-term, cost effective solution for water scarcity
+                                            in
+                                            difficult
+                                            terrains... </p>
+                                    </div>
+                                </div>
+                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
+                                    <a routerLink="/whatwedo" class="text-white"><b>Shahid jawan fund</b></a>
                                 </div>
                             </div>
-                            <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
-                                <b>Shahid jawan fund</b>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-12">
-                            <div class="card" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
+                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;">
+                                <div class="card" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
 ">
-                                <div class="card-body text-center">
-                                    <img src="../../../assets/img/Ellipse 14 (2).png">
-                                    <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
-                                    <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative Of
-                                        Social
-                                        Networking Forum ...a long-term, cost effective solution for water scarcity in
-                                        difficult
-                                        terrains... </p>
+                                    <div class="card-body text-center">
+                                        <img src="../../../assets/img/Ellipse 14 (2).png">
+                                        <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
+                                        <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative
+                                            Of
+                                            Social
+                                            Networking Forum ...a long-term, cost effective solution for water scarcity
+                                            in
+                                            difficult
+                                            terrains... </p>
+                                    </div>
+                                </div>
+                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
+                                    <a routerLink="/whatwedo" class="text-white"><b>rural & tribal</b></a>
                                 </div>
                             </div>
-                            <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
-                                <b>rural & tribal</b>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-12">
-                            <div class="card" style="background-color: #FAE5D8; border-radius: 20px;box-shadow: 20px 15px 40px 0px #00000040;
+                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;">
+                                <div class="card" style="background-color: #FAE5D8; border-radius: 20px;box-shadow: 20px 15px 40px 0px #00000040;
 ">
-                                <div class="card-body text-center">
-                                    <img src="../../../assets/img/Ellipse 14 (3).png">
-                                    <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
-                                    <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative Of
-                                        Social
-                                        Networking Forum ...a long-term, cost effective solution for water scarcity in
-                                        difficult
-                                        terrains... </p>
+                                    <div class="card-body text-center">
+                                        <img src="../../../assets/img/Ellipse 14 (3).png">
+                                        <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
+                                        <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative
+                                            Of
+                                            Social
+                                            Networking Forum ...a long-term, cost effective solution for water scarcity
+                                            in
+                                            difficult
+                                            terrains... </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
-                                <b class="">envirnoment conservation</b>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </section>
-
-
-
-    <div id="newsarticle" class=" pt-lg-5">
-        <section
-            class="elementor-section elementor-top-section elementor-element elementor-element-b198359 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-            data-id="b198359" data-element_type="section">
-            <div class="elementor-container elementor-column-gap-default">
-                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-51a0e3a"
-                    data-id="51a0e3a" data-element_type="column">
-                    <div class="elementor-widget-wrap elementor-element-populated">
-                        <div class="elementor-element elementor-element-a545222 elementor-widget elementor-widget-ova_heading"
-                            data-id="a545222" data-element_type="widget" data-widget_type="ova_heading.default">
-                            <div class="elementor-widget-container ">
-                                <div class="ova-heading justify-content-center">
-                                    <h4 class="sub_title thrid_font">From the Blog</h4>
-                                    <h2 class="title second_font">News & Articles</h2>
+                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
+                                    <a routerLink="/whatwedo" class="text-white"><b>envirnoment conservation</b></a>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </section>
-       
-     <div class="HEAD_START" style="background-color: #D8FFFF; margin-top: -20px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let item of newsAndArticlesData">
-                        <img [src]="item.imageUrl" class="img-fluid" alt="...">
+
+
+
+
+        <div id="newsarticle" class=" pt-lg-2">
+            <section
+                class="elementor-section elementor-top-section elementor-element elementor-element-b198359 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                data-id="b198359" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-51a0e3a"
+                        data-id="51a0e3a" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-a545222 elementor-widget elementor-widget-ova_heading"
+                                data-id="a545222" data-element_type="widget" data-widget_type="ova_heading.default">
+                                <div class="elementor-widget-container newsarticle_home">
+                                    <div class="ova-heading justify-content-center">
+                                        <h4 class="sub_title thrid_font">From the Blog</h4>
+                                        <h2 class="title second_font">News & Articles</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
-            </div>
-            <!-- <div class="container">
+            </section>
+
+            <div class="HEAD_START" style="background-color: #D8FFFF; margin-top: -20px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let item of newsAndArticlesData">
+                            <img [src]="item.imageUrl" class="img-fluid" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let item of newsAndArticlesData">
                         <img [src]="item.imageUrl" class="img-fluid" alt="...">
@@ -348,7 +363,7 @@
                     </div>
                 </div>
             </div> -->
-            <!-- <div class="container">
+                <!-- <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12">
                         <img src="../../../assets/img/ArticleOnSNF/article_fourimg.png" class="img-fluid" alt="...">
@@ -361,84 +376,87 @@
                     </div>
                 </div>
             </div> -->
-        </div>
+            </div>
 
 
 
-        <section>
-            <div class=" container-fluid snileback">
-                <div class=" text-center smiletiile">Bringing thousand of smile </div>
-                <div class=" row d-flex justify-content-center smilerow">
+            <section>
+                <div class=" container-fluid snileback">
+                    <div class=" text-center smiletiile">Bringing thousand of smile </div>
+                    <div class=" row d-flex justify-content-center smilerow">
 
-                    <div class="col-lg-5">
-                        <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="">
-                        <div class="smileinfo mx-4 px-3 py-3 rounded-pill  text-center">
-                            INSTEAD OF SEARCHING WATER IN JUNGLES, NOW WE CAN STUDY...BUT WHAT ABOUT OTHER VILLAGES?
+                        <div class="col-lg-5 Bringing_card">
+                            <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="">
+                            <div class="smileinfo mx-4 px-3 py-3 rounded-pill  text-center">
+                                INSTEAD OF SEARCHING WATER IN JUNGLES, NOW WE CAN STUDY...BUT WHAT ABOUT OTHER VILLAGES?
+                            </div>
+
                         </div>
+                        <div class="col-lg-5">
+                            <img src="../../../assets/img/Home_Page/Group 1000003958.png" alt="">
+                            <div class="smileinfo mx-4 px-3 py-3 rounded-pill  text-center">
+                                INSTEAD OF SEARCHING WATER IN JUNGLES, NOW WE CAN STUDY...BUT WHAT ABOUT OTHER VILLAGES?
+                            </div>
 
-                    </div>
-                    <div class="col-lg-5">
-                        <img src="../../../assets/img/Home_Page/Group 1000003958.png" alt="">
-                        <div class="smileinfo mx-4 px-3 py-3 rounded-pill  text-center">
-                            INSTEAD OF SEARCHING WATER IN JUNGLES, NOW WE CAN STUDY...BUT WHAT ABOUT OTHER VILLAGES?
+
                         </div>
-
-
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
 
-        <div class=" text-center capsultiitle">Reviews</div>
-       
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div *ngFor="let item of Home_4_Cards_Data; let i = index" class="carousel-item"
-                [ngClass]="{'active': i === 0}">
-                <div class="container-fluid">
-                    <div>
-                        <div class="row d-flex justify-content-center cpsulebackcolor">
-                            <div class="col-lg-8 ">
-                                <div class="row cpsuleback rounded-5 p-lg-4 p-2 text-justify m-4 m-lg-0">
-                                    <div class="col-lg-4">
-                                        <img [src]="item.imageUrl" class="testomonialimg" alt="">
-                                    </div>
-                                    <div class="col-lg-8 d-grid align-content-center">
-                                        <div class="capsultiitle">{{item.name}}</div>
-                                        <p style="font-style: oblique; font-size: 20px;">{{item.city}}</p>
-                                        <div>{{item.para}}</div>
-                                        
+            <div class=" text-center capsultiitle " id="reviewname">Reviews</div>
+
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div *ngFor="let item of Home_4_Cards_Data; let i = index" class="carousel-item"
+                        [ngClass]="{'active': i === 0}">
+                        <div class="container-fluid">
+                            <div>
+                                <div class="row d-flex justify-content-center cpsulebackcolor">
+                                    <div class="col-lg-8 ">
+                                        <div class="row cpsuleback rounded-5 p-lg-4 p-2 text-justify m-4 m-lg-0">
+                                            <div class="col-lg-4 pt-3">
+                                                <img [src]="item.imageUrl" class="testomonialimg" alt="">
+                                            </div>
+                                            <div class="col-lg-8 d-grid align-content-center">
+                                                <div class="capsultiitle">{{item.name}}</div>
+                                                <p style="font-style: oblique; font-size: 20px;">{{item.city}}</p>
+                                                <div class="pb-3">{{item.para}}</div>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-             
+
+
+
+            <div>
+
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
 
-       
 
-        <div>
 
+
+
+
+
+            <app-footer></app-footer>
         </div>
-
-
-
-
-
-
-
-        <app-footer></app-footer>
-    </div>
+        

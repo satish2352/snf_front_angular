@@ -638,3 +638,35 @@
 .menu-item a:hover {
   text-decoration: underline; /* Adds underline on hover for links */
 }
+
+@media only screen and (max-width: 600px) {
+  .donate_homebtn{
+    margin-right: 600px;
+  }
+  .explore_name{
+   float: left;
+   padding-bottom: 30px;
+   /* margin-left: 120px; */
+   
+  }
+  .footermenu_item2{
+    margin-top: -103px;
+    padding-top: 10px;
+    margin-left: -10px;
+    float: left;
+  }
+ .address_footer{
+  margin-bottom: -100px;
+  margin-top: -60px;
+ }
+  /* .footer_item{
+    text-align: center;
+    margin-left: 10px;
+  } */
+
+  }
+
+  .elementor-2805[_ngcontent-ng-c581060601] .elementor-element.elementor-element-a0b1a0a[_ngcontent-ng-c581060601] {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 13px 0px 13px 0px;
+}

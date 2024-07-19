@@ -6,9 +6,16 @@
     margin: 0;
     margin-bottom: -20px;
 }
-.Who_we_are{
+
+.Who_we_are {
     background-image: url('../../../assets/img/About us/aboutback_img.png');
     margin-top: -60px;
-    
-    
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .youtube_video {
+        margin-bottom: -90px;
+    }
 }
