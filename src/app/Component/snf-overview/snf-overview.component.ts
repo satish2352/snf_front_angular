@@ -30,6 +30,8 @@ export class SNFOverviewComponent {
   ];
 
   togglePanel(index: number) {
-    this.panels[index].isOpen = !this.panels[index].isOpen;
+    this.panels.forEach((panel, i) => {
+      panel.isOpen = i === index ? !panel.isOpen : false;
+    });
   }
 }

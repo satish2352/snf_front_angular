@@ -12,10 +12,7 @@
     }
 }
 
-#NAVBAR_HERE {
-    
-    height: 80px;
-}
+
 
 .navbar-brand img {
     max-width: 100%;
@@ -26,7 +23,10 @@
     padding-top: 0;
     padding-bottom: 0;
 }
-
+.navlogo{
+    width: 300px;
+    height: 40px;
+}
 .navbar-toggler {
     border: none;
     outline: none;

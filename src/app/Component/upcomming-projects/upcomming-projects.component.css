@@ -51,8 +51,6 @@
     font-size: 15px;
 }
 
-#LIST_ITEM {}
-
 .upcomingprojectheader {
     background: #DF5225;
     color: white;
@@ -76,3 +74,16 @@
     box-shadow: 0px 4px 4px 0px #00000040;
 
 }
+@media(max-width:767px) {
+    .donatenow {
+        background: #DF5225;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        text-align: center;
+        height: auto;
+        width: 200px ;
+        border-radius: 30px;
+        font-size: 23px;
+        padding: 7px;
+        /* margin-top: 20px; */
+    
+  }}

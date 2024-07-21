@@ -19,7 +19,7 @@
     <app-header></app-header>
 
 
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" style="margin-top: 80px !important;" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" id="carsoleimgs">
             <div *ngFor="let item of carrosalData; let i = index" [class.active]="i === 0" class="carousel-item">
                 <img [src]="item.imageUrl" class="d-block w-100" alt="...">
