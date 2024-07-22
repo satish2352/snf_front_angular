@@ -11,9 +11,10 @@ export class Home1Component {
   name = '';
   image: File | null = null;
   carrosalData: any;
-  newsData:any;
-  upcomingevents:any;
-  newsAndArticlesData:any;
+  newsData: any;
+  upcomingEvents: any;
+  upcomingevents: any;
+  newsAndArticlesData: any;
   selectedItem: any = { _id: '', name: '', imageUrl: '' };
   constructor(private service: ServiceService, private router: ActivatedRoute) { }
   ngOnInit(): void {
@@ -23,10 +24,10 @@ export class Home1Component {
     this.fetch4CardsData();
     this.fetchsupporterData();
     this.fetchNewsData();
-    this.fetcheventdata();
+    this.fetcheventData();
   }
 
-  fetcheventdata(){
+  fetcheventdata() {
     this.service.getNewsAndArticlesData().subscribe(
       (response) => {
         console.log(response);
@@ -55,15 +56,24 @@ export class Home1Component {
   onFileChange(event: any): void {
     this.image = event.target.files[0];
   }
-//News data from Home
-   fetchNewsData() {
-  this.service.getHome_Media().subscribe(
-  (response) => {      console.log(response);
-   this.newsData = response;
-     }
+  //News data from Home
+  fetchNewsData() {
+    this.service.getHome_Media().subscribe(
+      (response) => {
+        console.log(response);
+        this.newsData = response;
+      }
     );
- }
- 
+  }
+  fetcheventData() {
+    this.service.getupcomingevents().subscribe(
+      (response) => {
+        console.log(response);
+        this.upcomingEvents = response;
+
+      }
+    );
+  }
 
 
 
@@ -135,5 +145,12 @@ export class Home1Component {
 
   onFileChange_sup(event: any): void {
     this.image = event.target.files[0];
+  }
+  limitWords(text: string, limit: number): string {
+    const words = text.split(' ');
+    if (words.length > limit) {
+      return words.slice(0, limit).join(' ') + '...';
+    }
+    return text;
   }
 }

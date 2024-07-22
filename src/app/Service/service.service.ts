@@ -184,7 +184,7 @@ export class ServiceService {
   }
   private upcomingevents = 'https://snf.backend.socialforumindia.com/upcomingeventsRoute';
   getupcomingevents() {
-    return this.http.get(`${this.upcomingevents}/get`)
+    return this.http.get(`https://snf.backend.socialforumindia.com/upcomingeventsRoute/get`)
   }
 
 }

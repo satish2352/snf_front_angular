@@ -53,8 +53,8 @@
                     <div class="d-flex justify-content-end">
                         <div class="readmorebtn">
                             <a routerLink="/whoweare"><button type="button"
-                                style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;"><b>Read
-                                    More</b></button></a>
+                                    style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;"><b>Read
+                                        More</b></button></a>
                         </div>
 
                     </div>
@@ -73,11 +73,7 @@
                 <h4 class="Hometitle text-center mt-3">Happy People</h4>
                 <h2 class="homepagenames text-center">Our Suppporters</h2>
             </div>
-            <!-- <div class="d-flex justify-content-end">
-                <button type="button"
-                    style="background-color: #ff6d12; color: white; padding: 12px; width: 180px; border-radius: 50px; border: none;"><b>Read
-                        More</b></button>
-            </div> -->
+
             <br>
         </div>
         <div class="card Our_Suppportersimgs" style="background-color: #DFBB41;">
@@ -88,14 +84,7 @@
             </div>
         </div>
 
-        <!-- <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let item of support_data; let i = index"
-                        [class.active]="i === 0">
-                        <img [src]="item.imageUrl" class="img-fluid" alt="..." id="ourimg">
-                    </div>
-                </div>
-            </div> -->
+
 
     </div>
     <!-- 2 Cards  -->
@@ -200,8 +189,13 @@
                                         <li class="ourlist">
                                             <div class="list-text">
                                                 <h4 class="title">OUR </h4>
-                                                <p class="text">Our goal is to supply clean water to people who can
-                                                    not access to safe water.</p>
+                                                <p class="text">Our goal is to supply clean water to people who can not
+                                                    access safe water. By providing clean water, we aim to improve the
+                                                    overall health and quality of life for communities in need.
+                                                    Additionally, we strive to promote sustainable practices that will
+                                                    ensure long-term access to safe water sources. Through our efforts,
+                                                    we hope to create a lasting impact on these communities by
+                                                    addressing the root causes of water scarcity and contamination.</p>
                                                 <!-- <div class="elementor-widget-container"
                                                 style="padding-top: 20px; padding-bottom: -5px;">
                                                 <div class="ova-btn"> <a routerLink="/DonateNow" class="btn"> Donate Now
@@ -226,88 +220,25 @@
 
 
 
-        <section class=" position-relative pb-lg-5">
-            <div class=" container">
-                <div class=" row">
+        <section class="position-relative pb-lg-5">
+            <div class="container">
+                <div class="row">
                     <section style="margin-top: 100px;">
                         <h1 style="font-family: Abril Fatface;" class="text-center our_ongoing">Our On Going Project
                         </h1>
-                        <div class=" row d-flex justify-content-center smilerow">
-
-                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;">
-                                <div class="card card_home" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
-">
+                        <div class="row d-flex justify-content-center smilerow">
+                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;"
+                                *ngFor="let item of upcomingEvents">
+                                <div class="card card_home"
+                                    style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;">
                                     <div class="card-body text-center">
-                                        <img src="../../../assets/img/Ellipse 14.png">
-                                        <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
-                                        <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative
-                                            Of
-                                            Social
-                                            Networking Forum ...a long-term, cost effective solution for water scarcity
-                                            in
-                                            difficult
-                                            terrains..</p>
+                                        <img [src]="item.mainImageUrl" alt="Project Image" style=" width: 230px; height: 250px;">
+                                        <p style="text-align: justify; line-height: normal;">
+                                            {{ limitWords(item.Paragraph, 20) }}                                        </p>
                                     </div>
                                 </div>
-                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center" id="homecard_data">
-                                    <a routerLink="/whatwedo" class="text-white"><b>Clean Water Project</b></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;">
-                                <div class="card" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
-">
-                                    <div class="card-body text-center">
-                                        <img src="../../../assets/img/Ellipse 14 (1).png">
-                                        <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
-                                        <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative
-                                            Of
-                                            Social
-                                            Networking Forum ...a long-term, cost effective solution for water scarcity
-                                            in
-                                            difficult
-                                            terrains... </p>
-                                    </div>
-                                </div>
-                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
-                                    <a routerLink="/whatwedo" class="text-white"><b>Shahid jawan fund</b></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;">
-                                <div class="card" style="background-color: #FAE5D8; border-radius: 20px; box-shadow: 20px 15px 40px 0px #00000040;
-">
-                                    <div class="card-body text-center">
-                                        <img src="../../../assets/img/Ellipse 14 (2).png">
-                                        <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
-                                        <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative
-                                            Of
-                                            Social
-                                            Networking Forum ...a long-term, cost effective solution for water scarcity
-                                            in
-                                            difficult
-                                            terrains... </p>
-                                    </div>
-                                </div>
-                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
-                                    <a routerLink="/whatwedo" class="text-white"><b>rural & tribal</b></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-2 col-sm-12" style="margin-top: -30px;">
-                                <div class="card" style="background-color: #FAE5D8; border-radius: 20px;box-shadow: 20px 15px 40px 0px #00000040;
-">
-                                    <div class="card-body text-center">
-                                        <img src="../../../assets/img/Ellipse 14 (3).png">
-                                        <!-- <img src="../../../assets/img/Home_Page/Rectangle 4362.png" alt="" style="border-radius: 50%; height: 160px !important; width: 150px !important; ">  -->
-                                        <p style="text-align: justify; line-height: normal;">SNF Pattern, An Initiative
-                                            Of
-                                            Social
-                                            Networking Forum ...a long-term, cost effective solution for water scarcity
-                                            in
-                                            difficult
-                                            terrains... </p>
-                                    </div>
-                                </div>
-                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill  text-center">
-                                    <a routerLink="/whatwedo" class="text-white"><b>envirnoment conservation</b></a>
+                                <div class="smileinfo mx-4 px-3 py-4 mt-3 rounded-pill text-center" id="homecard_data">
+                                    <a routerLink="/whatwedo" class="text-white"><b>{{item.category}}</b></a>
                                 </div>
                             </div>
                         </div>
@@ -315,6 +246,7 @@
                 </div>
             </div>
         </section>
+
 
 
 
@@ -344,7 +276,7 @@
             <div class="HEAD_START" style="background-color: #D8FFFF; margin-top: -20px;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let item of newsAndArticlesData">
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-lg-3" *ngFor="let item of newsAndArticlesData">
                             <img [src]="item.imageUrl" class="img-fluid" alt="...">
                         </div>
 
@@ -382,7 +314,7 @@
 
             <section>
                 <div class=" container-fluid snileback">
-                    <div class=" text-center smiletiile">Bringing thousand of smile </div>
+                    <div class=" text-center smiletiile">Bringing thousands of smile </div>
                     <div class=" row d-flex justify-content-center smilerow">
 
                         <div class="col-lg-5 Bringing_card">
@@ -459,4 +391,3 @@
 
             <app-footer></app-footer>
         </div>
-        

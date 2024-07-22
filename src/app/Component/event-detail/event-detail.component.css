@@ -10,7 +10,7 @@
 .Who_we_are {
     background-image: url('../../../assets/img/About us/aboutback_img.png');
     margin-top: -60px;
-
+    background-size: contain;
 
 }
 
